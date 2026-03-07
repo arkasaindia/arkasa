@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Careers &#8212; ARKASA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    /* Why Join */
+    .cjoin{background:var(--bg-2);padding:80px 0 64px;border-top:1px solid var(--border);}
+    .cjoin-inner{max-width:1100px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;}
+    .cjoin-body p{color:var(--text-muted);font-size:.95rem;line-height:1.9;margin-bottom:16px;}
+    .cjoin-pills{display:flex;flex-direction:column;gap:12px;}
+    .cjoin-pill{background:var(--bg-card);border:1px solid var(--border);border-radius:4px;padding:16px 22px;font-family:'Rajdhani',sans-serif;font-size:.95rem;color:rgba(255,255,255,.8);font-weight:500;display:flex;align-items:center;gap:12px;transition:border-color .25s,color .25s;}
+    .cjoin-pill::before{content:'';width:7px;height:7px;border-radius:50%;background:linear-gradient(135deg,#22d3ee,#a855f7);flex-shrink:0;}
+    .cjoin-pill:hover{border-color:rgba(34,211,238,.4);color:#fff;}
+    .cjoin-note{margin-top:28px;padding:20px 24px;background:rgba(168,85,247,.06);border:1px solid rgba(168,85,247,.2);border-radius:4px;font-family:'Rajdhani',sans-serif;font-size:.88rem;color:rgba(255,255,255,.55);line-height:1.7;}
+    @media(max-width:768px){.cjoin-inner{grid-template-columns:1fr;gap:40px;}}
+    /* Position cards */
+    .positions-grid{display:grid;grid-template-columns:1fr;gap:0;}
+    .pos-card{background:var(--bg-card);border:1px solid var(--border);border-radius:6px;overflow:hidden;transition:border-color .3s,box-shadow .3s;margin-bottom:24px;}
+    .pos-card:last-child{margin-bottom:0;}
+    .pos-card:hover{border-color:rgba(34,211,238,.35);box-shadow:0 16px 48px rgba(34,211,238,.08);}
+    .pos-header{padding:36px 40px 28px;cursor:pointer;display:flex;align-items:flex-start;justify-content:space-between;gap:24px;}
+    .pos-meta{flex:1;}
+    .pos-badge{display:inline-block;padding:3px 12px;border-radius:20px;font-family:'Rajdhani',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;background:rgba(34,211,238,.1);color:var(--cyan);border:1px solid rgba(34,211,238,.25);margin-bottom:12px;}
+    .pos-title{font-family:'Orbitron',sans-serif;font-size:1.1rem;font-weight:700;color:#fff;line-height:1.3;margin-bottom:8px;}
+    .pos-type{font-family:'Rajdhani',sans-serif;font-size:.82rem;color:var(--text-dim);letter-spacing:.06em;}
+    .pos-toggle{font-size:1.4rem;color:var(--cyan);flex-shrink:0;transition:transform .3s;user-select:none;line-height:1;}
+    .pos-card.open .pos-toggle{transform:rotate(45deg);}
+    .pos-body{display:none;padding:0 40px 36px;border-top:1px solid var(--border);}
+    .pos-card.open .pos-body{display:block;}
+    .pos-desc{color:var(--text-muted);font-size:.93rem;line-height:1.85;margin-bottom:24px;padding-top:24px;}
+    .pos-section-title{font-family:'Rajdhani',sans-serif;font-size:.75rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);margin-bottom:12px;margin-top:24px;}
+    .pos-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px;margin-bottom:4px;}
+    .pos-list li{color:var(--text-muted);font-size:.88rem;line-height:1.7;padding-left:20px;position:relative;}
+    .pos-list li::before{content:'+';position:absolute;left:0;color:var(--cyan);font-size:.8rem;font-weight:700;}
+    .pos-subsection{margin-top:20px;}
+    .pos-subsection h5{font-family:'Rajdhani',sans-serif;font-size:.82rem;font-weight:700;color:rgba(255,255,255,.75);letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px;}
+    .pos-apply-row{margin-top:28px;padding-top:24px;border-top:1px solid var(--border);display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
+    .pos-apply-btn{display:inline-block;padding:13px 36px;background:linear-gradient(90deg,#22d3ee,#a855f7);color:#000;font-family:'Orbitron',sans-serif;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border-radius:3px;text-decoration:none;transition:opacity .25s,transform .25s,box-shadow .25s;box-shadow:0 0 24px rgba(34,211,238,.2);}
+    .pos-apply-btn:hover{opacity:.88;transform:translateY(-2px);box-shadow:0 6px 32px rgba(168,85,247,.35);}
+    /* Note */
+    .careers-note{background:var(--bg-2);padding:72px 0;border-top:1px solid var(--border);}
+    .careers-note-inner{max-width:760px;margin:0 auto;padding:0 32px;text-align:center;}
+    .note-box{border:1px solid rgba(168,85,247,.3);background:rgba(168,85,247,.06);border-radius:6px;padding:40px 48px;}
+    .note-box h3{font-family:'Orbitron',sans-serif;font-size:.95rem;font-weight:700;color:#fff;margin-bottom:14px;letter-spacing:.04em;}
+    .note-box p{color:var(--text-muted);font-size:.92rem;line-height:1.85;}
+    @media(max-width:600px){.pos-header{padding:28px 24px 22px;}.pos-body{padding:0 24px 28px;}.note-box{padding:28px 24px;}}
+  </style>
+</head>
+<body>
+<header id="navbar">
+  <nav class="nav-container">
+    <a href="index.html" class="nav-logo"><img src="assets/images/logo-white.png" alt="ARKASA"/></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html"        class="nav-link">Home</a></li>
+      <li><a href="about.html"        class="nav-link">About</a></li>
+      <li><a href="projects.html"     class="nav-link">Projects</a></li>
+      <li><a href="team.html"         class="nav-link">Team</a></li>
+      <li><a href="achievements.html" class="nav-link">Achievements</a></li>
+      <li><a href="events.html"       class="nav-link">Events</a></li>
+      <li><a href="careers.html"      class="nav-link active">Careers</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<div class="page-hero">
+  <div class="page-hero-content">
+    <span class="page-hero-lbl">Work With Us</span>
+    <h1 class="page-hero-title">Careers at <span class="grad-text">ARKASA</span></h1>
+    <p class="page-hero-sub">Join us in shaping the future of space architecture and extraterrestrial design.</p>
+  </div>
+</div>
+
+<!-- WHY JOIN -->
+<section class="cjoin reveal">
+  <div class="cjoin-inner">
+    <div class="cjoin-body">
+      <p>At ARKASA, we are building a collaborative studio exploring the future of space architecture, extraterrestrial habitats, and interdisciplinary research.</p>
+      <p>Our work lies at the intersection of architecture, space science, design, simulation, and storytelling. We believe the future of space exploration will be shaped not just by engineers and scientists, but also by designers, thinkers, creators, and storytellers.</p>
+      <p>We are looking for passionate individuals who are curious about space and eager to learn, collaborate, and experiment with new ideas.</p>
+      <div class="cjoin-note">All positions currently offered are <strong style="color:rgba(255,255,255,.7);">remote and voluntary (unpaid)</strong> and are intended for individuals who want to gain experience, contribute to research initiatives, and be part of a growing creative space-tech studio.</div>
+    </div>
+    <div>
+      <p style="font-family:'Rajdhani',sans-serif;font-size:.75rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan);margin-bottom:18px;">Why Join ARKASA?</p>
+      <div class="cjoin-pills">
+        <div class="cjoin-pill">Work on future-focused space concepts</div>
+        <div class="cjoin-pill">Collaborate with researchers, designers, and engineers</div>
+        <div class="cjoin-pill">Gain portfolio-worthy experience</div>
+        <div class="cjoin-pill">Be part of an experimental creative studio exploring space futures</div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="nebula-line"></div>
+
+<!-- OPEN POSITIONS -->
+<section class="section" style="background:var(--bg);">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Opportunities</span>
+      <h2 class="section-title">Open <span class="grad-text">Positions</span></h2>
+    </div>
+
+    <!-- 3D Game Developer -->
+    <div class="pos-card reveal" data-delay="0">
+      <div class="pos-header" onclick="togglePos(this)">
+        <div class="pos-meta">
+          <span class="pos-badge">Internship</span>
+          <h3 class="pos-title">3D Game Developer Intern</h3>
+          <span class="pos-type">Remote &#8212; Voluntary</span>
+        </div>
+        <span class="pos-toggle">+</span>
+      </div>
+      <div class="pos-body">
+        <p class="pos-desc">As a 3D Game Developer Intern, you will work on developing interactive simulation environments and visual tools that support our research on extraterrestrial habitats and space systems.</p>
+        <p class="pos-section-title">Responsibilities</p>
+        <ul class="pos-list">
+          <li>Developing interactive 3D/2D simulations, prototypes, and visualization tools supporting ARKASA's extraterrestrial habitat research</li>
+          <li>Implementing gameplay mechanics, physics systems, and environment interactions</li>
+          <li>Assisting in procedural generation and simulation of extraterrestrial terrains</li>
+          <li>Optimizing assets, lighting, animation, and performance for smooth execution</li>
+          <li>Collaborating with architects, designers, and researchers to translate conceptual models into simulation environments</li>
+          <li>Debugging and refining game systems for stability and accuracy</li>
+        </ul>
+        <div class="pos-apply-row">
+          <a class="pos-apply-btn" href="https://forms.gle/6U9YN4Mn6bPKJTL87" target="_blank" rel="noopener noreferrer">Apply Here</a>
+          <span style="font-family:'Rajdhani',sans-serif;font-size:.82rem;color:var(--text-dim);">Remote &#183; Voluntary &#183; Internship</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Graphic Designer -->
+    <div class="pos-card reveal" data-delay="100">
+      <div class="pos-header" onclick="togglePos(this)">
+        <div class="pos-meta">
+          <span class="pos-badge">Internship</span>
+          <h3 class="pos-title">Graphic Designer Intern</h3>
+          <span class="pos-type">Remote &#8212; Voluntary</span>
+        </div>
+        <span class="pos-toggle">+</span>
+      </div>
+      <div class="pos-body">
+        <p class="pos-desc">As a Graphic Design Intern, you will help communicate ARKASA's ideas through strong visual storytelling and digital content.</p>
+        <p class="pos-section-title">Responsibilities</p>
+        <div class="pos-subsection">
+          <h5>Social Media &amp; Content Strategy</h5>
+          <ul class="pos-list">
+            <li>Curate and schedule content across platforms such as Instagram and LinkedIn</li>
+            <li>Translate complex space-related concepts into engaging digital narratives</li>
+            <li>Craft visual campaigns around space architecture, futurism, and studio research</li>
+            <li>Monitor trends in design, space-tech, and storytelling</li>
+            <li>Track engagement metrics to refine content strategies</li>
+          </ul>
+        </div>
+        <div class="pos-subsection">
+          <h5>Graphic Design &amp; Visual Storytelling</h5>
+          <ul class="pos-list">
+            <li>Design posters, carousels, and digital assets aligned with ARKASA's visual identity</li>
+            <li>Create speculative visuals, mood boards, and teaser content</li>
+            <li>Develop clean, futuristic layouts for conceptual projects</li>
+            <li>Maintain brand consistency and design reusable content templates</li>
+          </ul>
+        </div>
+        <p class="pos-section-title" style="margin-top:28px;">You're a Good Fit If You</p>
+        <ul class="pos-list">
+          <li>Are proficient in Adobe Suite (Photoshop, Illustrator), Canva, or Figma</li>
+          <li>Have a strong sense of clean, futuristic design aesthetics</li>
+          <li>Enjoy visual storytelling and concept-driven design</li>
+          <li>Are curious about space architecture and speculative design</li>
+          <li>Can work independently while managing creative responsibilities</li>
+        </ul>
+        <div class="pos-apply-row">
+          <a class="pos-apply-btn" href="https://forms.gle/6U9YN4Mn6bPKJTL87" target="_blank" rel="noopener noreferrer">Apply Here</a>
+          <span style="font-family:'Rajdhani',sans-serif;font-size:.82rem;color:var(--text-dim);">Remote &#183; Voluntary &#183; Internship</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Space Architecture Intern -->
+    <div class="pos-card reveal" data-delay="200">
+      <div class="pos-header" onclick="togglePos(this)">
+        <div class="pos-meta">
+          <span class="pos-badge">Internship</span>
+          <h3 class="pos-title">Space Architecture Intern</h3>
+          <span class="pos-type">Remote &#8212; Voluntary</span>
+        </div>
+        <span class="pos-toggle">+</span>
+      </div>
+      <div class="pos-body">
+        <p class="pos-desc">As a Space Architecture Intern, you will assist in research and conceptual design projects exploring habitats, infrastructure, and spatial systems for space environments.</p>
+        <p class="pos-section-title">Responsibilities</p>
+        <ul class="pos-list">
+          <li>Assisting in the development of architectural plans, designs, drawings, and conceptual research</li>
+          <li>Conducting research on materials, construction techniques, and sustainability practices</li>
+          <li>Collaborating with the team on concept development and project presentations</li>
+          <li>Using architectural software to develop models, renders, and visualizations</li>
+          <li>Contributing to research initiatives and conceptual space habitat studies</li>
+        </ul>
+        <div class="pos-apply-row">
+          <a class="pos-apply-btn" href="https://forms.gle/6U9YN4Mn6bPKJTL87" target="_blank" rel="noopener noreferrer">Apply Here</a>
+          <span style="font-family:'Rajdhani',sans-serif;font-size:.82rem;color:var(--text-dim);">Remote &#183; Voluntary &#183; Internship</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content Writer -->
+    <div class="pos-card reveal" data-delay="300">
+      <div class="pos-header" onclick="togglePos(this)">
+        <div class="pos-meta">
+          <span class="pos-badge">Internship</span>
+          <h3 class="pos-title">Content Writer</h3>
+          <span class="pos-type">Remote &#8212; Voluntary</span>
+        </div>
+        <span class="pos-toggle">+</span>
+      </div>
+      <div class="pos-body">
+        <p class="pos-desc">As a Content Writer, you will help communicate ARKASA's ideas, research, and projects to a global audience through engaging narratives.</p>
+        <p class="pos-section-title">Responsibilities</p>
+        <ul class="pos-list">
+          <li>Researching and developing compelling narratives around space architecture and cosmic design principles</li>
+          <li>Creating editorial content, articles, and press materials for digital and print platforms</li>
+          <li>Crafting social media campaigns to enhance ARKASA's outreach</li>
+          <li>Developing SEO-driven content strategies to increase visibility</li>
+          <li>Collaborating with the team to refine communication and storytelling strategies</li>
+        </ul>
+        <div class="pos-apply-row">
+          <a class="pos-apply-btn" href="https://forms.gle/6U9YN4Mn6bPKJTL87" target="_blank" rel="noopener noreferrer">Apply Here</a>
+          <span style="font-family:'Rajdhani',sans-serif;font-size:.82rem;color:var(--text-dim);">Remote &#183; Voluntary &#183; Internship</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<div class="nebula-line"></div>
+
+<!-- IMPORTANT NOTE -->
+<section class="careers-note">
+  <div class="careers-note-inner reveal">
+    <div class="note-box">
+      <h3>Important Note</h3>
+      <p>All roles listed above are currently <strong style="color:rgba(255,255,255,.75);">voluntary (unpaid) and remote positions</strong>. These opportunities are intended for students, creatives, and young professionals who are passionate about space, design, and future technologies, and who wish to gain hands-on experience while contributing to experimental research and creative exploration.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand"><img src="assets/images/logo-white.png" alt="ARKASA" class="footer-logo"/><p class="footer-tagline">Space Architecture<br/>Design Research Labs</p></div>
+      <div class="footer-cols">
+        <div class="footer-col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="projects.html">Projects</a></li></ul></div>
+        <div class="footer-col"><h4>Explore</h4><ul><li><a href="team.html">Team</a></li><li><a href="achievements.html">Achievements</a></li><li><a href="events.html">Events</a></li></ul></div>
+        <div class="footer-col"><h4>Connect</h4><ul><li><a href="careers.html">Careers</a></li><li><a href="mailto:info@arkasa.com">info@arkasa.com</a></li><li><span style="color:var(--text-dim)">Raipur, Chhattisgarh</span></li></ul></div>
+      </div>
+    </div>
+    <div class="footer-bottom">&#169; 2025 by ARKASA &#8212; Space Architecture Design Research Labs. All rights reserved.</div>
+  </div>
+</footer>
+<script src="script.js"></script>
+<script>
+function togglePos(header){
+  var card = header.closest('.pos-card');
+  card.classList.toggle('open');
+}
+</script>
+</body>
+</html>

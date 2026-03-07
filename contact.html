@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Contact � ARKASA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    .contact-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:60px;align-items:start;}
+    .contact-info h3{font-family:'Orbitron',sans-serif;font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:18px;}
+    .contact-info p{color:var(--text-muted);font-size:.92rem;line-height:1.85;margin-bottom:32px;}
+    .contact-details{display:flex;flex-direction:column;gap:20px;margin-bottom:36px;}
+    .contact-item{display:flex;align-items:flex-start;gap:16px;}
+    .contact-icon{width:42px;height:42px;border:1px solid var(--border);border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;}
+    .contact-item-body{}
+    .contact-item-body strong{display:block;font-family:'Rajdhani',sans-serif;font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--cyan);margin-bottom:4px;}
+    .c-link{color:var(--text-muted);text-decoration:none;font-size:.9rem;transition:color .2s;}
+    .c-link:hover{color:var(--cyan);}
+    .contact-form-wrap{background:var(--bg-card);border:1px solid var(--border);border-radius:6px;padding:44px 40px;}
+    .contact-form-wrap h3{font-family:'Orbitron',sans-serif;font-size:.95rem;font-weight:700;color:#fff;margin-bottom:28px;}
+    .f-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+    .f-group{display:flex;flex-direction:column;gap:7px;margin-bottom:18px;}
+    .f-group label{font-family:'Rajdhani',sans-serif;font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-dim);}
+    .f-group input,.f-group select,.f-group textarea{background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:3px;color:#fff;font-family:'Inter',sans-serif;font-size:.9rem;padding:12px 16px;width:100%;outline:none;transition:border-color .25s,box-shadow .25s;}
+    .f-group input:focus,.f-group select:focus,.f-group textarea:focus{border-color:var(--cyan);box-shadow:0 0 0 3px rgba(34,211,238,.08);}
+    .f-group select{cursor:pointer;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%2322d3ee' d='M6 8L0 0h12z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;}
+    .f-group select option{background:var(--bg-card);}
+    .f-group textarea{resize:vertical;min-height:120px;}
+    .f-success{display:none;margin-top:18px;padding:16px 20px;background:rgba(34,211,238,.08);border:1px solid rgba(34,211,238,.3);border-radius:3px;color:var(--cyan);font-size:.9rem;font-family:'Rajdhani',sans-serif;letter-spacing:.04em;}
+    .aff-logos-strip{display:flex;align-items:center;gap:24px;margin-top:40px;padding-top:32px;border-top:1px solid var(--border);}
+    .aff-logos-strip span{font-family:'Rajdhani',sans-serif;font-size:.75rem;color:var(--text-dim);letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;}
+    .aff-logos-strip img{height:38px;object-fit:contain;filter:brightness(0) invert(1);opacity:.55;transition:opacity .2s;}
+    .aff-logos-strip img:hover{opacity:.85;}
+    @media(max-width:768px){
+      .contact-grid{grid-template-columns:1fr;gap:40px;}
+      .contact-form-wrap{padding:30px 22px;}
+      .f-row{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+<body>
+<header id="navbar">
+  <nav class="nav-container">
+    <a href="index.html" class="nav-logo"><img src="assets/images/logo-white.png" alt="ARKASA"/></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html"        class="nav-link">Home</a></li>
+      <li><a href="about.html"        class="nav-link">About</a></li>
+      <li><a href="projects.html"    class="nav-link">Projects</a></li>
+      <li><a href="team.html"         class="nav-link">Team</a></li>
+      <li><a href="achievements.html" class="nav-link">Achievements</a></li>
+      <li><a href="events.html"       class="nav-link">Events</a></li>
+      <li><a href="careers.html"      class="nav-link">Careers</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<div class="page-hero">
+  <div class="page-hero-content">
+    <span class="page-hero-lbl">Get In Touch</span>
+    <h1 class="page-hero-title">Contact <span class="grad-text">Arkasa</span></h1>
+    <p class="page-hero-sub">Questions, collaborations, associate programs � we'd love to hear from you.</p>
+  </div>
+</div>
+
+<!-- CONTACT SECTION -->
+<section class="section" style="background:var(--bg);">
+  <div class="container">
+    <div class="contact-grid reveal">
+
+      <!-- LEFT: INFO -->
+      <div class="contact-info">
+        <h3>Reach Out to Us</h3>
+        <p>Whether you're a student, researcher, institution, or someone passionate about space architecture � our doors are open. Fill in the form or write directly to our inbox and we'll get back to you within 2�3 working days.</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-icon">?</div>
+            <div class="contact-item-body">
+              <strong>Email</strong>
+              <a href="mailto:info@arkasa.com" class="c-link">info@arkasa.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div class="contact-item-body">
+              <strong>Address</strong>
+              <span class="c-link">Signature Homes, Labhandih<br/>Raipur, Chhattisgarh � 492001<br/>India</span>
+            </div>
+          </div>
+        </div>
+        <div class="aff-logos-strip">
+          <span>Affiliated with</span>
+          <a href="affiliations.html"><img src="assets/images/isro.png" alt="ISRO"/></a>
+          <a href="affiliations.html"><img src="assets/images/inspace.png" alt="IN-SPACe"/></a>
+        </div>
+      </div>
+
+      <!-- RIGHT: FORM -->
+      <div class="contact-form-wrap">
+        <h3>Send a Message</h3>
+        <form id="contactForm" onsubmit="handleContact(event)" novalidate>
+          <div class="f-row">
+            <div class="f-group">
+              <label for="cName">Full Name</label>
+              <input type="text" id="cName" name="name" placeholder="Your name" required/>
+            </div>
+            <div class="f-group">
+              <label for="cEmail">Email Address</label>
+              <input type="email" id="cEmail" name="email" placeholder="you@email.com" required/>
+            </div>
+          </div>
+          <div class="f-group">
+            <label for="cSubject">Subject</label>
+            <select id="cSubject" name="subject" required>
+              <option value="" disabled selected>Select a topic�</option>
+              <option value="general">General Enquiry</option>
+              <option value="collaboration">Research Collaboration</option>
+              <option value="associate">Associate Program</option>
+              <option value="workshop">Workshop Registration</option>
+              <option value="media">Media / Press</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="f-group">
+            <label for="cMsg">Message</label>
+            <textarea id="cMsg" name="message" placeholder="Tell us what's on your mind�" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary" style="width:100%;justify-content:center;">Send Message</button>
+          <div class="f-success" id="fSuccess">? &nbsp;Message received � we'll be in touch soon!</div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+<div class="nebula-line"></div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand"><img src="assets/images/logo-white.png" alt="ARKASA" class="footer-logo"/><p class="footer-tagline">Space Architecture<br/>Design Research Labs</p></div>
+      <div class="footer-cols">
+        <div class="footer-col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="research.html">Research</a></li><li><a href="projects.html">Projects</a></li></ul></div>
+        <div class="footer-col"><h4>Explore</h4><ul><li><a href="team.html">Team</a></li><li><a href="events.html">Events</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Connect</h4><ul><li><a href="mailto:info@arkasa.com">info@arkasa.com</a></li><li><span style="color:var(--text-dim)">Raipur, Chhattisgarh</span></li><li><span style="color:var(--text-dim)">India � 492001</span></li></ul></div>
+      </div>
+    </div>
+    <div class="footer-bottom">� 2025 by ARKASA � Space Architecture Design Research Labs. All rights reserved.</div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

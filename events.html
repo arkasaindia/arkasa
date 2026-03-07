@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Events &amp; Programs &#8212; ARKASA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    .rip-quote-wrap{padding:72px 0 56px;background:var(--bg);text-align:center;}
+    .rip-quote{max-width:780px;margin:0 auto;padding:0 32px;position:relative;}
+    .rip-quote::before{content:'\201C';font-family:'Orbitron',sans-serif;font-size:7rem;line-height:.7;color:rgba(34,211,238,.12);position:absolute;top:-10px;left:20px;pointer-events:none;}
+    .rip-quote p{font-family:'Rajdhani',sans-serif;font-size:clamp(1.05rem,2.2vw,1.35rem);font-weight:500;color:rgba(255,255,255,.75);line-height:1.8;font-style:italic;letter-spacing:.01em;}
+    .rip-lead{background:var(--bg-2);padding:80px 0 64px;border-top:1px solid var(--border);}
+    .rip-lead-inner{max-width:860px;margin:0 auto;padding:0 32px;}
+    .rip-label{font-family:'Rajdhani',sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan);margin-bottom:14px;display:block;}
+    .rip-title{font-family:'Orbitron',sans-serif;font-size:clamp(1.6rem,3.8vw,2.8rem);font-weight:700;color:#fff;margin-bottom:18px;line-height:1.15;}
+    .rip-tagline{font-family:'Rajdhani',sans-serif;font-size:clamp(1rem,2vw,1.2rem);font-weight:500;color:rgba(255,255,255,.6);margin-bottom:36px;line-height:1.7;}
+    .rip-body p{color:var(--text-muted);font-size:.96rem;line-height:1.9;margin-bottom:16px;}
+    .rip-fields{background:var(--bg);padding:72px 0;}
+    .rip-fields-inner{max-width:1100px;margin:0 auto;padding:0 32px;}
+    .rip-sh{margin-bottom:40px;}
+    .rip-sh .section-label{font-family:'Rajdhani',sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan);display:block;margin-bottom:10px;}
+    .rip-sh h2{font-family:'Orbitron',sans-serif;font-size:clamp(1.3rem,2.8vw,2rem);font-weight:700;color:#fff;}
+    .fields-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;margin-bottom:28px;}
+    .field-pill{background:var(--bg-card);border:1px solid var(--border);border-radius:4px;padding:16px 20px;font-family:'Rajdhani',sans-serif;font-size:.9rem;color:rgba(255,255,255,.75);font-weight:500;display:flex;align-items:center;gap:10px;transition:border-color .25s,color .25s;}
+    .field-pill::before{content:'';width:6px;height:6px;border-radius:50%;background:linear-gradient(135deg,#22d3ee,#a855f7);flex-shrink:0;}
+    .field-pill:hover{border-color:rgba(34,211,238,.4);color:#fff;}
+    .rip-note{color:var(--text-muted);font-size:.88rem;line-height:1.8;font-style:italic;}
+    .rip-two{background:var(--bg-2);padding:72px 0;border-top:1px solid var(--border);}
+    .rip-two-inner{max-width:1100px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:1fr 1fr;gap:60px;}
+    .rip-col h3{font-family:'Orbitron',sans-serif;font-size:1rem;font-weight:700;color:#fff;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid var(--border);}
+    .rip-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;}
+    .rip-list li{color:var(--text-muted);font-size:.9rem;line-height:1.7;padding-left:18px;position:relative;}
+    .rip-list li::before{content:'--';position:absolute;left:0;color:var(--cyan);font-size:.75rem;}
+    @media(max-width:768px){.rip-two-inner{grid-template-columns:1fr;gap:40px;}}
+    .rip-approach{background:var(--bg);padding:72px 0;border-top:1px solid var(--border);}
+    .rip-approach-inner{max-width:860px;margin:0 auto;padding:0 32px;}
+    .rip-steps{display:flex;flex-direction:column;gap:0;margin-top:40px;}
+    .rip-step{display:flex;gap:28px;align-items:flex-start;padding:28px 0;border-bottom:1px solid var(--border);}
+    .rip-step:last-child{border-bottom:none;}
+    .rip-step-num{font-family:'Orbitron',sans-serif;font-size:1.6rem;font-weight:700;background:linear-gradient(120deg,#22d3ee,#a855f7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;flex-shrink:0;min-width:44px;line-height:1.2;}
+    .rip-step-text h4{font-family:'Rajdhani',sans-serif;font-size:1rem;font-weight:700;color:#fff;margin-bottom:4px;letter-spacing:.04em;text-transform:uppercase;}
+    .rip-step-text p{color:var(--text-muted);font-size:.88rem;line-height:1.7;margin:0;}
+    .rip-apply{background:var(--bg-2);padding:80px 0;border-top:1px solid var(--border);text-align:center;}
+    .rip-apply-inner{max-width:620px;margin:0 auto;padding:0 32px;}
+    .rip-apply h2{font-family:'Orbitron',sans-serif;font-size:clamp(1.4rem,3vw,2.2rem);font-weight:700;color:#fff;margin-bottom:16px;}
+    .rip-apply p{color:var(--text-muted);font-size:.96rem;line-height:1.8;margin-bottom:36px;}
+    .rip-apply-btn{display:inline-block;padding:16px 48px;background:linear-gradient(90deg,#22d3ee,#a855f7);color:#000;font-family:'Orbitron',sans-serif;font-size:.85rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border-radius:3px;text-decoration:none;transition:opacity .25s,transform .25s,box-shadow .25s;box-shadow:0 0 32px rgba(34,211,238,.25);}
+    .rip-apply-btn:hover{opacity:.9;transform:translateY(-2px);box-shadow:0 8px 40px rgba(168,85,247,.4);}
+  </style>
+</head>
+<body>
+<header id="navbar">
+  <nav class="nav-container">
+    <a href="index.html" class="nav-logo"><img src="assets/images/logo-white.png" alt="ARKASA"/></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html"        class="nav-link">Home</a></li>
+      <li><a href="about.html"        class="nav-link">About</a></li>
+      <li><a href="projects.html"     class="nav-link">Projects</a></li>
+      <li><a href="team.html"         class="nav-link">Team</a></li>
+      <li><a href="achievements.html" class="nav-link">Achievements</a></li>
+      <li><a href="events.html"       class="nav-link active">Events</a></li>
+      <li><a href="careers.html"      class="nav-link">Careers</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<div class="page-hero">
+  <div class="page-hero-content">
+    <span class="page-hero-lbl">Programs at ARKASA</span>
+    <h1 class="page-hero-title">Research &amp; <span class="grad-text">Innovation</span></h1>
+    <p class="page-hero-sub">Empowering students, researchers, and innovators to transform ideas into impactful space research and real-world solutions.</p>
+  </div>
+</div>
+
+<!-- APPLY -->
+<section class="rip-apply">
+  <div class="rip-apply-inner reveal">
+    <span class="rip-label">Join the Initiative</span>
+    <h2>Apply Now</h2>
+    <p>If you are passionate about exploring new ideas and contributing to the future of space research, we invite you to join this initiative. Share your research interests with us and take the first step.</p>
+    <a class="rip-apply-btn" href="https://forms.gle/sG8Aan8UdCVpm3zWA" target="_blank" rel="noopener noreferrer">Apply Here</a>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<div class="rip-quote-wrap">
+  <div class="rip-quote reveal">
+    <p>&#8220;The future of space exploration will not be built by a single discipline, but through collaboration between science, engineering, design, and imagination.&#8221;</p>
+  </div>
+</div>
+<div class="nebula-line"></div>
+
+<!-- ABOUT THE PROGRAM -->
+<section class="rip-lead reveal">
+  <div class="rip-lead-inner">
+    <span class="rip-label">Initiative</span>
+    <h2 class="rip-title">Research &amp; Innovation Program</h2>
+    <p class="rip-tagline">Empowering students, researchers, and innovators to transform ideas into impactful space research and real-world solutions.</p>
+    <div class="rip-body">
+      <p>The Research &amp; Innovation Program is an initiative designed to support students, young professionals, and emerging researchers who are passionate about advancing knowledge in the space sector and interdisciplinary sciences.</p>
+      <p>Through this program, participants will receive mentorship, guidance, and collaborative opportunities to develop their ideas into structured research papers, prototypes, and real-world applications.</p>
+      <p>Our aim is to build a collaborative ecosystem of thinkers, designers, scientists, and engineers working at the intersection of space, technology, science, and creativity.</p>
+      <p>Participants will be guided through the process of research development, scientific writing, and publication, while also exploring possibilities to translate innovative ideas into practical prototypes and projects.</p>
+    </div>
+  </div>
+</section>
+<div class="nebula-line"></div>
+
+<!-- FIELDS OF RESEARCH -->
+<section class="rip-fields">
+  <div class="rip-fields-inner">
+    <div class="rip-sh reveal">
+      <span class="section-label">Disciplines</span>
+      <h2>Fields of <span class="grad-text">Research</span></h2>
+    </div>
+    <p class="rip-note reveal" style="margin-bottom:28px;">We welcome proposals and research ideas in areas including (but not limited to):</p>
+    <div class="fields-grid">
+      <div class="field-pill reveal" data-delay="0">Space Architecture</div>
+      <div class="field-pill reveal" data-delay="60">Aerospace Engineering</div>
+      <div class="field-pill reveal" data-delay="120">Space Biotechnology</div>
+      <div class="field-pill reveal" data-delay="180">Space Psychology &amp; Human Factors</div>
+      <div class="field-pill reveal" data-delay="240">Planetary Habitat Design</div>
+      <div class="field-pill reveal" data-delay="300">Space Sustainability &amp; Closed-loop Systems</div>
+      <div class="field-pill reveal" data-delay="360">Astrobiology</div>
+      <div class="field-pill reveal" data-delay="420">Advanced Materials for Space</div>
+      <div class="field-pill reveal" data-delay="480">Human&#8211;Space Interaction</div>
+      <div class="field-pill reveal" data-delay="540">Creative &amp; Interdisciplinary Approaches</div>
+    </div>
+    <p class="rip-note reveal">We also encourage cross-disciplinary ideas that combine science, design, engineering, and creative thinking.</p>
+  </div>
+</section>
+<div class="nebula-line"></div>
+
+<!-- WHO CAN APPLY + WHAT YOU GAIN -->
+<section class="rip-two">
+  <div class="rip-two-inner">
+    <div class="rip-col reveal" data-delay="0">
+      <h3>Who Can Apply</h3>
+      <ul class="rip-list">
+        <li>Undergraduate and postgraduate students</li>
+        <li>Young professionals</li>
+        <li>Independent researchers</li>
+        <li>Innovators and creative thinkers</li>
+        <li>Anyone passionate about space-related research and innovation</li>
+      </ul>
+      <p style="color:var(--text-muted);font-size:.88rem;line-height:1.8;margin-top:20px;font-style:italic;">No prior publication experience is required &#8212; curiosity and dedication to research are what matter most.</p>
+    </div>
+    <div class="rip-col reveal" data-delay="150">
+      <h3>What Participants Will Gain</h3>
+      <ul class="rip-list">
+        <li>Learn how to write and structure a research paper</li>
+        <li>Receive mentorship from experienced researchers and professionals</li>
+        <li>Develop research proposals and scientific publications</li>
+        <li>Collaborate with a network of interdisciplinary researchers</li>
+        <li>Work toward prototyping innovative ideas</li>
+        <li>Contribute to future-focused space research initiatives</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<div class="nebula-line"></div>
+
+<!-- PROGRAM APPROACH -->
+<section class="rip-approach">
+  <div class="rip-approach-inner">
+    <div class="rip-sh reveal">
+      <span class="section-label">Process</span>
+      <h2>Program <span class="grad-text">Approach</span></h2>
+    </div>
+    <p class="rip-note reveal">The program will guide participants through key stages:</p>
+    <div class="rip-steps">
+      <div class="rip-step reveal" data-delay="0">
+        <span class="rip-step-num">01</span>
+        <div class="rip-step-text">
+          <h4>Idea Development &amp; Research Direction</h4>
+          <p>Define your research question and map out the direction and scope of your work alongside mentors.</p>
+        </div>
+      </div>
+      <div class="rip-step reveal" data-delay="100">
+        <span class="rip-step-num">02</span>
+        <div class="rip-step-text">
+          <h4>Literature Review &amp; Research Structuring</h4>
+          <p>Survey existing knowledge and structure your research framework for clarity and academic rigour.</p>
+        </div>
+      </div>
+      <div class="rip-step reveal" data-delay="200">
+        <span class="rip-step-num">03</span>
+        <div class="rip-step-text">
+          <h4>Scientific Writing &amp; Documentation</h4>
+          <p>Develop your findings into a well-documented paper with guidance on scientific writing standards.</p>
+        </div>
+      </div>
+      <div class="rip-step reveal" data-delay="300">
+        <span class="rip-step-num">04</span>
+        <div class="rip-step-text">
+          <h4>Paper Submission &amp; Publication Guidance</h4>
+          <p>Receive support through the submission process, targeting relevant journals and conferences.</p>
+        </div>
+      </div>
+      <div class="rip-step reveal" data-delay="400">
+        <span class="rip-step-num">05</span>
+        <div class="rip-step-text">
+          <h4>Prototype Development &amp; Applied Research</h4>
+          <p>Explore pathways to translate research insights into tangible prototypes and real-world applications.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="nebula-line"></div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand"><img src="assets/images/logo-white.png" alt="ARKASA" class="footer-logo"/><p class="footer-tagline">Space Architecture<br/>Design Research Labs</p></div>
+      <div class="footer-cols">
+        <div class="footer-col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="projects.html">Projects</a></li></ul></div>
+        <div class="footer-col"><h4>Explore</h4><ul><li><a href="team.html">Team</a></li><li><a href="achievements.html">Achievements</a></li><li><a href="events.html">Events</a></li></ul></div>
+        <div class="footer-col"><h4>Connect</h4><ul><li><a href="mailto:info@arkasa.com">info@arkasa.com</a></li><li><span style="color:var(--text-dim)">Raipur, Chhattisgarh</span></li><li><span style="color:var(--text-dim)">India &#8212; 492001</span></li></ul></div>
+      </div>
+    </div>
+    <div class="footer-bottom">&#169; 2025 by ARKASA &#8212; Space Architecture Design Research Labs. All rights reserved.</div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Achievements – ARKASA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    /* ── STATS BAR ── */
+    .stats-bar{display:flex;justify-content:center;flex-wrap:wrap;gap:0;background:var(--bg-card);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+    .stat-item{display:flex;flex-direction:column;align-items:center;padding:40px 48px;border-right:1px solid var(--border);gap:6px;}
+    .stat-item:last-child{border-right:none;}
+    .stat-num{font-family:'Orbitron',sans-serif;font-size:2.4rem;font-weight:900;background:linear-gradient(135deg,#22d3ee,#a855f7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;}
+    .stat-lbl{font-family:'Rajdhani',sans-serif;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);text-align:center;}
+
+    /* ── AWARDS ── */
+    .awards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:28px;margin-top:16px;}
+    .award-card{background:var(--bg-card);border:1px solid var(--border);border-radius:6px;padding:40px 36px;display:flex;flex-direction:column;gap:14px;transition:transform .3s,border-color .3s,box-shadow .3s;position:relative;overflow:hidden;}
+    .award-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan),var(--violet));}
+    .award-card:hover{transform:translateY(-6px);border-color:rgba(34,211,238,.35);box-shadow:0 24px 60px rgba(34,211,238,.1);}
+    .award-img-wrap{margin:-40px -36px 28px;overflow:hidden;border-radius:4px 4px 0 0;}
+    .award-img-wrap img{width:100%;height:280px;object-fit:cover;object-position:top;display:block;}
+    .award-tag{display:inline-block;padding:3px 12px;border-radius:20px;font-family:'Rajdhani',sans-serif;font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;background:rgba(34,211,238,.1);color:var(--cyan);border:1px solid rgba(34,211,238,.25);width:fit-content;}
+    .award-tag.violet{background:rgba(168,85,247,.1);color:var(--violet);border-color:rgba(168,85,247,.25);}
+    .award-title{font-family:'Orbitron',sans-serif;font-size:1rem;font-weight:700;color:#fff;line-height:1.4;}
+    .award-who{font-family:'Rajdhani',sans-serif;font-size:.9rem;font-weight:600;color:var(--cyan);letter-spacing:.05em;}
+    .award-desc{color:var(--text-muted);font-size:.9rem;line-height:1.75;}
+
+    /* ── CONTRIBUTIONS GRID ── */
+    .contrib-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-top:16px;}
+    .contrib-card{background:var(--bg-card);border:1px solid var(--border);border-radius:6px;overflow:hidden;transition:transform .3s,border-color .3s,box-shadow .3s;}
+    .contrib-card:hover{transform:translateY(-5px);border-color:rgba(168,85,247,.35);box-shadow:0 20px 50px rgba(168,85,247,.1);}
+    .contrib-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:var(--bg-2);}
+    .contrib-img-placeholder{width:100%;aspect-ratio:16/9;background:linear-gradient(135deg,rgba(34,211,238,.06),rgba(168,85,247,.08));display:flex;align-items:center;justify-content:center;font-size:2.5rem;}
+    .contrib-body{padding:22px 24px;display:flex;flex-direction:column;gap:8px;}
+    .contrib-tag{display:inline-block;padding:2px 10px;border-radius:20px;font-family:'Rajdhani',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:rgba(168,85,247,.1);color:var(--violet);border:1px solid rgba(168,85,247,.25);width:fit-content;}
+    .contrib-title{font-family:'Orbitron',sans-serif;font-size:.85rem;font-weight:700;color:#fff;line-height:1.4;}
+    .contrib-desc{color:var(--text-dim);font-size:.82rem;line-height:1.65;}
+
+    @media(max-width:768px){
+      .stat-item{padding:28px 24px;}.stat-num{font-size:1.8rem;}
+      .awards-grid{grid-template-columns:1fr;}
+      .contrib-grid{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+<body>
+<header id="navbar">
+  <nav class="nav-container">
+    <a href="index.html" class="nav-logo"><img src="assets/images/logo-white.png" alt="ARKASA"/></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html"          class="nav-link">Home</a></li>
+      <li><a href="about.html"          class="nav-link">About</a></li>
+      <li><a href="projects.html"       class="nav-link">Projects</a></li>
+      <li><a href="team.html"           class="nav-link">Team</a></li>
+      <li><a href="achievements.html"   class="nav-link active">Achievements</a></li>
+      <li><a href="events.html"         class="nav-link">Events</a></li>
+      <li><a href="careers.html"        class="nav-link">Careers</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-content">
+    <span class="page-hero-lbl">Recognition & Impact</span>
+    <h1 class="page-hero-title">Awards &amp; <span class="grad-text">Achievements</span></h1>
+    <p class="page-hero-sub">Milestones, recognitions, and contributions that define Arkasa's journey across disciplines.</p>
+  </div>
+</div>
+
+<!-- STATS BAR -->
+<div class="stats-bar reveal">
+  <div class="stat-item">
+    <span class="stat-num">20+</span>
+    <span class="stat-lbl">Trainees</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">10+</span>
+    <span class="stat-lbl">Workshops &amp;<br/>Masterclasses</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">10+</span>
+    <span class="stat-lbl">Collaborations</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">5</span>
+    <span class="stat-lbl">Research<br/>Streams</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">4</span>
+    <span class="stat-lbl">Research<br/>Papers</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">5</span>
+    <span class="stat-lbl">Project<br/>Proposals</span>
+  </div>
+</div>
+<div class="nebula-line"></div>
+
+<!-- AWARDS & ACHIEVEMENTS -->
+<section class="section" style="background:var(--bg-2);">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Honours</span>
+      <h2 class="section-title">Awards &amp; <span class="grad-text">Recognitions</span></h2>
+      <p class="section-subtitle">Individual and institutional honours earned through pioneering work in space architecture.</p>
+    </div>
+    <div class="awards-grid">
+
+      <div class="award-card reveal" data-delay="0">
+        <div class="award-img-wrap"><img src="assets/images/ach-youngachiever.png" alt="Young Achievers Award"/></div>
+        <span class="award-tag">Individual Award</span>
+        <div class="award-title">Indian Achievers Forum Award</div>
+        <div class="award-who">Arshleen Kaur Sahni</div>
+        <p class="award-desc">Arshleen's groundbreaking contributions to the field earned her the prestigious Indian Achievers Forum Award — a testament to her dedication, ingenuity, and impact on the space technology landscape.</p>
+      </div>
+
+      <div class="award-card reveal" data-delay="100">
+        <div class="award-img-wrap"><img src="assets/images/ach-tedx-award.png" alt="TEDx Flame University"/></div>
+        <span class="award-tag">Speaking Honour</span>
+        <div class="award-title">TEDx Talks Flames — "From Dreaming of Space to Crafting It"</div>
+        <div class="award-who">Arshleen Kaur Sahni</div>
+        <p class="award-desc">Invited speaker at TEDx Flames University, Pune, delivering a talk on the intersection of space architecture, imagination, and engineering reality.</p>
+      </div>
+
+      <div class="award-card reveal" data-delay="200">
+        <div class="award-img-wrap"><img src="assets/images/ach-flag-hiseas.png" alt="India at HI-SEAS"/></div>
+        <span class="award-tag violet">International</span>
+        <div class="award-title">Represented India at HI-SEAS Analog Astronaut Mission, Hawaii</div>
+        <div class="award-who">Aagam Jain</div>
+        <p class="award-desc">Aagam Jain proudly represented India at HI-SEAS, Hawaii, where he hoisted the Tiranga atop Mauna Loa — the world's largest volcanic mountain — during his landmark participation in the EMMIHS Lunar Simulation Mission.</p>
+      </div>
+
+      <div class="award-card reveal" data-delay="0">
+        <span class="award-tag">Competition Winner</span>
+        <div class="award-title">Winner — Samunnati 2024 Art & Architecture Festival</div>
+        <div class="award-who">Moon House Design (Chandravaas)</div>
+        <p class="award-desc">Won at the Samunnati 2024 Art and Architecture Festival for the Moon House design (Chandravaas), organised by the Council of Architecture as part of the India Art, Architecture, and Design Student Biennale.</p>
+      </div>
+
+      <div class="award-card reveal" data-delay="100">
+        <span class="award-tag violet">Honorable Mention</span>
+        <div class="award-title">Honorable Mention — Marsception 2024 by Volume Zero</div>
+        <div class="award-who">Martian Habitation Design</div>
+        <p class="award-desc">Received an Honorable Mention at Marsception 2024, a global competition by Volume Zero to design a Martian Habitation, recognizing Arkasa's innovative approach to extraterrestrial living environments.</p>
+      </div>
+
+      <div class="award-card reveal" data-delay="200">
+        <span class="award-tag">Innovation Award</span>
+        <div class="award-title">Winner — FIA Ideathon 2025</div>
+        <div class="award-who">GAIA-HAB: Generative Adaptive Interface for Astronauts</div>
+        <p class="award-desc">Recognized for the groundbreaking project "GAIA-HAB: Generative Adaptive Interface for Astronauts — Holistic Adaptive Biophilia," which envisions adaptive, biophilic space habitats to enhance astronaut health, resilience, and performance.</p>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+<div class="nebula-line"></div>
+
+<!-- OUR CONTRIBUTIONS -->
+<section class="section" style="background:var(--bg);">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Our Contribution</span>
+      <h2 class="section-title">In the <span class="grad-text">Field</span></h2>
+      <p class="section-subtitle">Workshops, conferences, missions, and global collaborations that put Arkasa on the map.</p>
+    </div>
+    <div class="contrib-grid">
+
+      <div class="contrib-card reveal" data-delay="0">
+        <img class="contrib-img" src="assets/images/ach-workshop-stanthonys.png" alt="Space Architecture Workshop St. Anthony's"/>
+        <div class="contrib-body">
+          <span class="contrib-tag">Workshop</span>
+          <div class="contrib-title">Space Architecture Workshop — St. Anthony's Convent School</div>
+          <p class="contrib-desc">Conducted a Space Architecture Workshop at St. Anthony's Convent School, Jwalaika, Uttarakhand, introducing students to the fundamentals of designing for space.</p>
+        </div>
+      </div>
+
+      <div class="contrib-card reveal" data-delay="100">
+        <img class="contrib-img" src="assets/images/ach-hiseas-crew.png" alt="IMA HI-SEAS Crew"/>
+        <div class="contrib-body">
+          <span class="contrib-tag">Analog Mission</span>
+          <div class="contrib-title">IMA HI-SEAS Analog Astronaut Program — Hawaii, USA</div>
+          <p class="contrib-desc">Crew participation at the IMA HI-SEAS Analog Astronaut Program in Hawaii, USA, including EVA operations atop Mauna Loa and full mission simulation protocols.</p>
+        </div>
+      </div>
+
+      <div class="contrib-card reveal" data-delay="200">
+        <img class="contrib-img" src="assets/images/ach-bioinspired-panel.png" alt="Bio-Inspired Frontier Panel"/>
+        <div class="contrib-body">
+          <span class="contrib-tag">Conference</span>
+          <div class="contrib-title">Panel Discussion — Bio-Inspired Frontier 2025, GEOPAQ</div>
+          <p class="contrib-desc">Contributor in Panel Discussion at the Bio-Inspired Frontier 2025 International Conference organized by GEOPAQ, engaging with global leaders in bio-inspired design and space research.</p>
+        </div>
+      </div>
+
+      <div class="contrib-card reveal" data-delay="0">
+        <img class="contrib-img" src="assets/images/ach-tedx-speaker.png" alt="TEDx Flame University Speaker"/>
+        <div class="contrib-body">
+          <span class="contrib-tag">Speaking</span>
+          <div class="contrib-title">Speaker — TEDx Flame University, Pune</div>
+          <p class="contrib-desc">Delivered an inspiring talk at TEDx Flame University on the journey from dreaming of space to designing for it, reaching a wide audience of students and professionals.</p>
+        </div>
+      </div>
+
+      <div class="contrib-card reveal" data-delay="100">
+        <img class="contrib-img" src="assets/images/ach-astroscope.png" alt="Astroscope Astronomy Event"/>
+        <div class="contrib-body">
+          <span class="contrib-tag">Outreach</span>
+          <div class="contrib-title">Astronomy Event — Astroscope, Uttarakhand</div>
+          <p class="contrib-desc">Part of an astronomy event organized by Astroscope, officially recognized by Uttarakhand Tourism & Government for its contribution to science outreach in the region.</p>
+        </div>
+      </div>
+
+      <div class="contrib-card reveal" data-delay="200">
+        <img class="contrib-img" src="assets/images/ach-bioinspired-speaker.png" alt="Bio-Inspired Frontier Speaker"/>
+        <div class="contrib-body">
+          <span class="contrib-tag">Conference Talk</span>
+          <div class="contrib-title">Speaker Session — Bio-Inspired Frontier 2025, GEOPAQ</div>
+          <p class="contrib-desc">"Cosmic Biomimicry: Resonance as Design Intelligence" — a speaker session at Bio-Inspired Frontier 2025, presenting Arkasa's research at the intersection of biomimicry and space architecture.</p>
+        </div>
+      </div>
+
+      <div class="contrib-card reveal" data-delay="0">
+        <img class="contrib-img" src="assets/images/ach-iac2025.png" alt="IAC 2025 Sydney"/>
+        <div class="contrib-body">
+          <span class="contrib-tag">International Conference</span>
+          <div class="contrib-title">International Astronautical Congress (IAC) 2025 — Sydney</div>
+          <p class="contrib-desc">Represented Arkasa at the International Astronautical Congress (IAC) 2025 in Sydney, connecting with the global space community and showcasing our research vision.</p>
+        </div>
+      </div>
+
+      <div class="contrib-card reveal" data-delay="100">
+        <img class="contrib-img" src="assets/images/ach-ictac2025.png" alt="ICTAC 2025 Paper Presentation"/>
+        <div class="contrib-body">
+          <span class="contrib-tag">Research Paper</span>
+          <div class="contrib-title">Paper Presentation — ICTAC 2025, Urban Symphony, Chandigarh</div>
+          <p class="contrib-desc">Presented a conference paper at ICTAC 2025 proceedings, Urban Symphony, hosted by Chandigarh University, contributing to the academic discourse on space-influenced architecture.</p>
+        </div>
+      </div>
+
+      <div class="contrib-card reveal" data-delay="200">
+        <img class="contrib-img" src="assets/images/ach-glex2025.png" alt="GLEX 2025 Paper Presentation"/>
+        <div class="contrib-body">
+          <span class="contrib-tag">Research Paper</span>
+          <div class="contrib-title">Paper Presentation — GLEX 2025, ISRO × IAF</div>
+          <p class="contrib-desc">Presented a paper at the GLEX 2025 conference proceedings, hosted by ISRO in collaboration with IAF — one of the most prestigious global space exploration forums.</p>
+        </div>
+      </div>
+
+      <div class="contrib-card reveal" data-delay="0">
+        <img class="contrib-img" src="assets/images/ach-metaaeon.png" alt="MetaAeon Workshop Series"/>
+        <div class="contrib-body">
+          <span class="contrib-tag">Workshop Series</span>
+          <div class="contrib-title">MetaAeon International Workshop Series — World Space Week 2025</div>
+          <p class="contrib-desc">Hosted the MetaAeon International Workshop Series on the occasion of World Space Week 2025, bringing together participants globally to explore cosmic architecture and Meta Aeon principles — in collaboration with StarDust.</p>
+        </div>
+      </div>
+
+      <div class="contrib-card reveal" data-delay="100">
+        <img class="contrib-img" src="assets/images/ach-polaris.png" alt="Polaris Mission 2026"/>
+        <div class="contrib-body">
+          <span class="contrib-tag">Analog Mission</span>
+          <div class="contrib-title">Polaris Mission 2026 — AATC, Poland</div>
+          <p class="contrib-desc">Led as Crew Commander at the Analog Astronaut Training Centre (AATC) in Poland during Polaris Mission 2026, conducting habitat simulations and training protocols in a pressurized analog environment.</p>
+        </div>
+      </div>
+
+      <div class="contrib-card reveal" data-delay="200">
+        <img class="contrib-img" src="assets/images/ach-cosmic-meetup.png" alt="Cosmic Meet-up Jantar Mantar"/>
+        <div class="contrib-body">
+          <span class="contrib-tag">Community</span>
+          <div class="contrib-title">Cosmic Meet-up 2026 — Jantar Mantar, New Delhi</div>
+          <p class="contrib-desc">Organized and participated in the Cosmic Meet-up 2026 at Jantar Mantar, New Delhi — a gathering of space enthusiasts, researchers, and architects fostering community in India's space sector.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<div class="nebula-line"></div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/images/logo-white.png" alt="ARKASA" class="footer-logo"/>
+        <p class="footer-tagline">Space Architecture<br/>Design Research Labs</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="projects.html">Projects</a></li></ul></div>
+        <div class="footer-col"><h4>Explore</h4><ul><li><a href="team.html">Team</a></li><li><a href="achievements.html">Achievements</a></li><li><a href="events.html">Events</a></li></ul></div>
+        <div class="footer-col"><h4>Connect</h4><ul><li><a href="mailto:info@arkasa.com">info@arkasa.com</a></li><li><span style="color:var(--text-dim)">Raipur, Chhattisgarh</span></li><li><span style="color:var(--text-dim)">India — 492001</span></li></ul></div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2025 by ARKASA – Space Architecture Design Research Labs. All rights reserved.</div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

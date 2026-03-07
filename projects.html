@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Projects – ARKASA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    /* -- Lunar & Mars hero backdrop -- */
+    .portfolio-hero-bg{
+      position:absolute;inset:0;
+      background:
+        radial-gradient(ellipse 600px 300px at 15% 110%,rgba(200,200,200,.04) 0%,transparent 60%),
+        radial-gradient(ellipse 500px 250px at 85% 105%,rgba(180,80,40,.04) 0%,transparent 55%),
+        radial-gradient(ellipse at 50% 0%,rgba(34,211,238,.07) 0%,transparent 55%),
+        var(--bg);
+      z-index:0;
+    }
+    /* crater details */
+    .portfolio-hero-bg::before{
+      content:'';position:absolute;bottom:0;left:0;right:0;height:50%;
+      background:
+        radial-gradient(ellipse 80px 20px at 10% 100%,rgba(255,255,255,.025) 80%,transparent),
+        radial-gradient(ellipse 60px 14px at 30% 100%,rgba(255,255,255,.018) 80%,transparent),
+        radial-gradient(ellipse 100px 22px at 55% 100%,rgba(255,255,255,.022) 80%,transparent),
+        radial-gradient(ellipse 70px 16px at 78% 100%,rgba(255,255,255,.02) 80%,transparent),
+        radial-gradient(ellipse 55px 12px at 93% 100%,rgba(255,255,255,.016) 80%,transparent);
+    }
+    /* surface glow label */
+    .surface-lbl{
+      display:inline-flex;align-items:center;gap:10px;
+      font-family:var(--font-a);font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;
+      color:rgba(34,211,238,.5);margin-top:10px;
+    }
+    .surface-lbl span{display:inline-block;width:28px;height:1px;background:linear-gradient(90deg,var(--cyan),transparent);}
+
+    /* 6-project grid: 3 columns */
+    .portfolio-grid-6{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:24px;
+    }
+
+    /* Surface tag badge colours */
+    .tag-lunar{color:#c7e8ff;background:rgba(199,232,255,.08);border-color:rgba(199,232,255,.2);}
+    .tag-mars{color:#fbbf80;background:rgba(251,191,128,.07);border-color:rgba(251,191,128,.18);}
+    .tag-orbital{color:#a855f7;background:rgba(168,85,247,.08);border-color:rgba(168,85,247,.2);}
+
+    @media(max-width:1000px){.portfolio-grid-6{grid-template-columns:1fr 1fr;}}
+    @media(max-width:640px){.portfolio-grid-6{grid-template-columns:1fr;}}
+
+  </style>
+</head>
+<body>
+<header id="navbar">
+  <nav class="nav-container">
+    <a href="index.html" class="nav-logo"><img src="assets/images/logo-white.png" alt="ARKASA"/></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html"        class="nav-link">Home</a></li>
+      <li><a href="about.html"        class="nav-link">About</a></li>
+      <li><a href="projects.html"    class="nav-link active">Projects</a></li>
+      <li><a href="team.html"         class="nav-link">Team</a></li>
+      <li><a href="achievements.html" class="nav-link">Achievements</a></li>
+      <li><a href="events.html"       class="nav-link">Events</a></li>
+      <li><a href="careers.html"      class="nav-link">Careers</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<!-- PAGE HERO with lunar surface backdrop -->
+<div class="page-hero" style="overflow:hidden;">
+  <div class="portfolio-hero-bg"></div>
+  <div class="page-hero-content" style="position:relative;z-index:1;">
+    <span class="page-hero-lbl">Our Work</span>
+    <h1 class="page-hero-title">Our <span class="grad-text">Projects</span></h1>
+    <p class="page-hero-sub">First steps into the vast frontier of space architecture � from lunar habitats to Martian spires, orbital stations to Earth-based analog research hubs.</p>
+    <div style="margin-top:24px;display:flex;justify-content:center;gap:32px;flex-wrap:wrap;">
+      <span class="surface-lbl"><span></span>Lunar Surface</span>
+      <span class="surface-lbl" style="color:rgba(251,130,80,.5)"><span style="background:linear-gradient(90deg,rgba(251,130,80,.6),transparent)"></span>Martian Terrain</span>
+      <span class="surface-lbl" style="color:rgba(168,85,247,.5)"><span style="background:linear-gradient(90deg,var(--violet),transparent)"></span>Orbital</span>
+    </div>
+  </div>
+</div>
+
+<!-- LUNAR SURFACE DIVIDER -->
+<div class="lunar-surface"></div>
+
+<!-- PROJECTS GRID -->
+<section class="section" style="background:var(--bg);">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Design Research</span>
+      <h2 class="section-title">Architecture Beyond <span class="grad-text">Earth</span></h2>
+      <p class="section-subtitle">Six projects exploring habitation, energy, and human life across the Moon, Mars, and orbital space.</p>
+    </div>
+
+    <div class="portfolio-grid-6">
+
+      <!-- 001 � Lunar Gateway Habitat -->
+      <div class="p-card card-tilt reveal" data-delay="0" onclick="openModal('m1')">
+        <div class="p-star-glow"></div>
+        <div class="p-gfx">
+          <img src="assets/images/lunar gateway habitation.jpg" alt="Lunar Gateway Habitat"/>
+          <div class="p-gfx-overlay"></div>
+          <span class="p-gfx-badge">🌕 Lunar Surface</span>
+        </div>
+        <div class="p-body">
+          <div class="p-num">001</div>
+          <h3 class="p-title">Lunar Gateway Habitat</h3>
+          <p class="p-excerpt">A sustainable, adaptive lunar settlement at Malapert Massif � myco-infused 3D-printed shells, modular carbon-fiber extensions, and a "Spine of Life" layout connecting habitation, research, and greenhouse ecosystems.</p>
+          <div class="p-tags">
+            <span class="p-tag tag-lunar">Lunar Surface</span>
+            <span class="p-tag">Habitat Design</span>
+            <span class="p-tag">ISRU</span>
+          </div>
+          <span class="p-cta">Explore Project →</span>
+        </div>
+      </div>
+
+      <!-- 002 � Voltaris Spire -->
+      <div class="p-card card-tilt reveal" data-delay="0" onclick="openModal('m2')">
+        <div class="p-star-glow"></div>
+        <div class="p-gfx">
+          <img src="assets/images/voltaris spire.png" alt="Voltaris Spire"/>
+          <div class="p-gfx-overlay"></div>
+          <span class="p-gfx-badge">🔴 Martian Terrain</span>
+        </div>
+        <div class="p-body">
+          <div class="p-num">002</div>
+          <h3 class="p-title">Voltaris Spire</h3>
+          <p class="p-excerpt">An Earth-based analog research hub for astronaut training located in the Martian-like terrain of Kutch, Gujarat. Featuring R&amp;D labs, analog training modules, observatories, and public outreach spaces � rooted in cosmic geometry and sustainable design.</p>
+          <div class="p-tags">
+            <span class="p-tag tag-mars">Analog Hub</span>
+            <span class="p-tag">Kutch, Gujarat</span>
+            <span class="p-tag">Training</span>
+          </div>
+          <span class="p-cta">Explore Project →</span>
+        </div>
+      </div>
+
+      <!-- 003 � Wardencliffe Aeon -->
+      <div class="p-card card-tilt reveal" data-delay="100" onclick="openModal('m3')">
+        <div class="p-star-glow"></div>
+        <div class="p-gfx">
+          <img src="assets/images/wardencliffe aeon.jpg" alt="Wardencliffe Aeon"/>
+          <div class="p-gfx-overlay"></div>
+          <span class="p-gfx-badge">✨ Orbital</span>
+        </div>
+        <div class="p-body">
+          <div class="p-num">003</div>
+          <h3 class="p-title">Wardencliffe Aeon</h3>
+          <p class="p-excerpt">Interlinking ancient technologies with modern science � a study that analyzes historical artifacts and scientific principles to bridge ancient technological wisdom with contemporary space architecture methodologies.</p>
+          <div class="p-tags">
+            <span class="p-tag tag-orbital">Meta Aeon</span>
+            <span class="p-tag">Ancient Science</span>
+            <span class="p-tag">Research</span>
+          </div>
+          <span class="p-cta">Explore Project →</span>
+        </div>
+      </div>
+
+      <!-- 004 � H.O.M.E. -->
+      <div class="p-card card-tilt reveal" data-delay="200" onclick="openModal('m4')">
+        <div class="p-star-glow"></div>
+        <div class="p-gfx">
+          <img src="assets/images/H.O.M.E.jpg" alt="H.O.M.E."/>
+          <div class="p-gfx-overlay"></div>
+          <span class="p-gfx-badge">🛸 ISS Attachment</span>
+        </div>
+        <div class="p-body">
+          <div class="p-num">004</div>
+          <h3 class="p-title">H.O.M.E.</h3>
+          <p class="p-excerpt">An attachment module designed to reduce space shuttle payload weight by encompassing all crew necessities and recreation facilities within itself � serving both as an ISS attachment during halt and a mission module during transit.</p>
+          <div class="p-tags">
+            <span class="p-tag tag-orbital">ISS Module</span>
+            <span class="p-tag">Psychology</span>
+            <span class="p-tag">Well-being</span>
+          </div>
+          <span class="p-cta">Explore Project →</span>
+        </div>
+      </div>
+
+      <!-- 005 � Chandravaas -->
+      <div class="p-card card-tilt reveal" data-delay="300" onclick="openModal('m5')">
+        <div class="p-star-glow"></div>
+        <div class="p-gfx">
+          <img src="assets/images/chandravaas.png" alt="Chandravaas"/>
+          <div class="p-gfx-overlay"></div>
+          <span class="p-gfx-badge">🌕 Lunar Living</span>
+        </div>
+        <div class="p-body">
+          <div class="p-num">005</div>
+          <h3 class="p-title">Chandravaas</h3>
+          <p class="p-excerpt">A human-centered lunar habitat capitalizing on lunar materials and advanced technologies � integrating hydroponics, meeting areas, recreational spaces, and bedrooms meticulously crafted to align with human psychology and well-being.</p>
+          <div class="p-tags">
+            <span class="p-tag tag-lunar">Lunar Habitat</span>
+            <span class="p-tag">Hydroponics</span>
+            <span class="p-tag">Human-Centric</span>
+          </div>
+          <span class="p-cta">Explore Project →</span>
+        </div>
+      </div>
+
+      <!-- 006 � Lunome -->
+      <div class="p-card card-tilt reveal" data-delay="400" onclick="openModal('m6')">
+        <div class="p-star-glow"></div>
+        <div class="p-gfx">
+          <img src="assets/images/lunome.png" alt="Lunome"/>
+          <div class="p-gfx-overlay"></div>
+          <span class="p-gfx-badge">🌕 Lunar Analog</span>
+        </div>
+        <div class="p-body">
+          <div class="p-num">006</div>
+          <h3 class="p-title">Lunome</h3>
+          <p class="p-excerpt">A secure and stimulating Lunar Analog Base � its name symbolizing a chain connecting Earth to outer space. An origami-inspired, anthropocentric design tackling sensory monotony, transportability, and the human toll of long-duration space missions.</p>
+          <div class="p-tags">
+            <span class="p-tag tag-lunar">Lunar Analog</span>
+            <span class="p-tag">Origami Form</span>
+            <span class="p-tag">Psychology</span>
+          </div>
+          <span class="p-cta">Explore Project →</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MARS SURFACE DIVIDER -->
+<div class="mars-surface"></div>
+
+<!-- MODALS -->
+<div class="modal-back" id="m1" onclick="closeModal(event,'m1')">
+  <div class="modal-box modal-tilt">
+    <button class="modal-close" onclick="closeModalDirect('m1')">×</button>
+    <div class="modal-img">
+      <img src="assets/images/lunar gateway habitation.jpg" alt="Lunar Gateway Habitat"/>
+      <div class="modal-img-overlay"></div>
+      <span class="modal-img-badge">🌕 Lunar Surface</span>
+    </div>
+    <div class="modal-content">
+      <span class="modal-lbl">Project 001 � Lunar Surface</span>
+      <h2 class="modal-title">Lunar Gateway Habitat</h2>
+      <div class="modal-body">
+        <p>The Lunar Gateway Habitat at Malapert Massif envisions a sustainable, adaptive lunar settlement designed to establish a long-term human presence near the Moon's south pole. Integrating advanced construction technologies, regenerative systems, and biophilic design principles, the project aims to create a resilient and health-supportive habitat for astronauts.</p>
+        <p>Utilizing in-situ resources such as regolith, ice, and recycled mission waste, the design features myco-infused 3D-printed shells, modular carbon-fiber extensions, and self-healing systems for enhanced durability.</p>
+        <p>The settlement's linear "Spine of Life" layout connects habitation units, research domes, and greenhouse ecosystems into a cohesive lunar community � a gateway for future deep space exploration.</p>
+        <div class="modal-tags"><span class="tag">Lunar Architecture</span><span class="tag">ISRU</span><span class="tag">Biophilic Design</span><span class="tag">3D-Printed Shell</span><span class="tag">Self-Healing Systems</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-back" id="m2" onclick="closeModal(event,'m2')">
+  <div class="modal-box modal-tilt">
+    <button class="modal-close" onclick="closeModalDirect('m2')">×</button>
+    <div class="modal-img">
+      <img src="assets/images/voltaris spire.png" alt="Voltaris Spire"/>
+      <div class="modal-img-overlay"></div>
+      <span class="modal-img-badge">🔴 Martian Terrain</span>
+    </div>
+    <div class="modal-content">
+      <span class="modal-lbl">Project 002 � Martian Terrain</span>
+      <h2 class="modal-title">Voltaris Spire</h2>
+      <div class="modal-body">
+        <p>Voltaris Spire is a visionary space architecture project designed as an Earth-based analog hub for astronaut training, research, and public engagement. Located in the Martian-like terrain of Kutch, Gujarat, the facility integrates academic, research, and experiential zones within a sustainable, modular masterplan.</p>
+        <p>Featuring R&amp;D labs, analog astronaut training modules, observatories, and public outreach spaces, it bridges innovation with education while addressing psychological and physiological needs of space exploration.</p>
+        <p>Rooted in cosmic geometry and sustainable design, Voltaris Spire embodies adaptability, resilience, and holistic learning, preparing humanity for future extraterrestrial missions while inspiring global communities through knowledge and immersive experiences.</p>
+        <div class="modal-tags"><span class="tag">Analog Research</span><span class="tag">Kutch Gujarat</span><span class="tag">Astronaut Training</span><span class="tag">Cosmic Geometry</span><span class="tag">Sustainable Design</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-back" id="m3" onclick="closeModal(event,'m3')">
+  <div class="modal-box modal-tilt">
+    <button class="modal-close" onclick="closeModalDirect('m3')">×</button>
+    <div class="modal-img">
+      <img src="assets/images/wardencliffe aeon.jpg" alt="Wardencliffe Aeon"/>
+      <div class="modal-img-overlay"></div>
+      <span class="modal-img-badge">✨ Meta Aeon</span>
+    </div>
+    <div class="modal-content">
+      <span class="modal-lbl">Project 003 � Meta Aeon</span>
+      <h2 class="modal-title">Wardencliffe Aeon</h2>
+      <div class="modal-body">
+        <p>Interlinking ancient technologies with science involves studying and understanding the scientific principles and mechanisms behind ancient technological practices. It involves analyzing historical artifacts, texts, and archaeological evidence to decipher the scientific knowledge and techniques utilized by ancient civilizations.</p>
+        <p>By bridging the gap between ancient technologies and modern scientific understanding, we can gain insights into the achievements, innovations, and wisdom of our ancestors. In the realm of science, the symbols of uncertainty play a crucial role in communicating the reliability and limitations of measurements and experimental data.</p>
+        <p>They help convey the variability and uncertainty inherent in scientific observations and calculations � representing the range of possible values, the precision of measurements, and the level of confidence in reported results.</p>
+        <div class="modal-tags"><span class="tag">Meta Aeon</span><span class="tag">Ancient Science</span><span class="tag">Uncertainty Symbols</span><span class="tag">Research</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-back" id="m4" onclick="closeModal(event,'m4')">
+  <div class="modal-box modal-tilt">
+    <button class="modal-close" onclick="closeModalDirect('m4')">×</button>
+    <div class="modal-img">
+      <img src="assets/images/H.O.M.E.jpg" alt="H.O.M.E."/>
+      <div class="modal-img-overlay"></div>
+      <span class="modal-img-badge">🛸 ISS Attachment</span>
+    </div>
+    <div class="modal-content">
+      <span class="modal-lbl">Project 004 � ISS Attachment</span>
+      <h2 class="modal-title">H.O.M.E.</h2>
+      <div class="modal-body">
+        <p>H.O.M.E is an attachment module which would reduce the weight of space shuttles sent from the earth as it encompasses all the necessities along with recreation facilities in itself. This will serve as an attachment to the ISS while on halt and an attachment to the space shuttle during the mission.</p>
+        <p>This study revolves around human psychology and well-being. The module is prepared for rehabilitation of human beings both mentally and physically, and also to reduce the weights of space shuttles thereby reducing costs of space missions.</p>
+        <p>H.O.M.E. represents a holistic approach to astronaut welfare � recognizing that the psychological resilience of the crew is as mission-critical as any engineering system aboard.</p>
+        <div class="modal-tags"><span class="tag">ISS Module</span><span class="tag">Psychology</span><span class="tag">Well-being</span><span class="tag">Weight Reduction</span><span class="tag">Rehabilitation</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-back" id="m5" onclick="closeModal(event,'m5')">
+  <div class="modal-box modal-tilt">
+    <button class="modal-close" onclick="closeModalDirect('m5')">×</button>
+    <div class="modal-img">
+      <img src="assets/images/chandravaas.png" alt="Chandravaas"/>
+      <div class="modal-img-overlay"></div>
+      <span class="modal-img-badge">🌕 Lunar Living</span>
+    </div>
+    <div class="modal-content">
+      <span class="modal-lbl">Project 005 � Lunar Living</span>
+      <h2 class="modal-title">Chandravaas</h2>
+      <div class="modal-body">
+        <p>Chandravaas is at the forefront of a lunar living revolution, introducing an intricately planned, human-centered habitat that capitalizes on lunar materials. The internal spaces are meticulously crafted to align with human psychology and well-being principles, ushering in a new era of lunar habitation.</p>
+        <p>This innovative habitat seamlessly integrates various functional zones, including hydroponics, meeting areas, recreational spaces, and bedrooms. What sets Chandravaas apart is the incorporation of advanced technologies, meticulously woven into the fabric of each space, not only to foster well-being but also to ensure sustainability.</p>
+        <p>From cutting-edge hydroponic systems to state-of-the-art meeting spaces and bedrooms, every component is designed with a keen eye on enhancing the overall quality of life on the lunar surface. Chandravaas represents a groundbreaking fusion of lunar resource utilization, human-centric design, and sustainable technologies.</p>
+        <div class="modal-tags"><span class="tag">Lunar Habitat</span><span class="tag">Hydroponics</span><span class="tag">Human-Centric</span><span class="tag">Psychology</span><span class="tag">Sustainability</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-back" id="m6" onclick="closeModal(event,'m6')">
+  <div class="modal-box modal-tilt">
+    <button class="modal-close" onclick="closeModalDirect('m6')">×</button>
+    <div class="modal-img">
+      <img src="assets/images/lunome.png" alt="Lunome"/>
+      <div class="modal-img-overlay"></div>
+      <span class="modal-img-badge">🌕 Lunar Analog</span>
+    </div>
+    <div class="modal-content">
+      <span class="modal-lbl">Project 006 � Lunar Analog</span>
+      <h2 class="modal-title">Lunome</h2>
+      <div class="modal-body">
+        <p>The LUNOME (Lunar Analog Base) is conceived as a secure and stimulating habitat for future space explorers � its name symbolizing a chain connecting Earth to outer space, fostering a space culture for survival beyond our planet.</p>
+        <p>The project's origin stems from a vision to democratize outer space access, recognizing the toll on human well-being imposed by space industry marvels. The interdisciplinary project delved into engineering, architecture, design, psychology, and physiology, adopting an anthropocentric approach.</p>
+        <p>Construction employed advanced digital tools with inspiration from origami � resulting in an unfolding habitat that addresses sensory monotony and transportability challenges. LUNOME's aluminum frame, origami shell, solar panels, and innovative insulation systems make it a model for portable and adaptive lunar architecture.</p>
+        <div class="modal-tags"><span class="tag">Lunar Analog</span><span class="tag">Origami Design</span><span class="tag">Anthropocentric</span><span class="tag">Transportable</span><span class="tag">Psychology</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand"><img src="assets/images/logo-white.png" alt="ARKASA" class="footer-logo"/><p class="footer-tagline">Space Architecture<br/>Design Research Labs</p></div>
+      <div class="footer-cols">
+        <div class="footer-col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="research.html">Research</a></li><li><a href="projects.html">Projects</a></li></ul></div>
+        <div class="footer-col"><h4>Explore</h4><ul><li><a href="team.html">Team</a></li><li><a href="events.html">Events</a></li></ul></div>
+        <div class="footer-col"><h4>Connect</h4><ul><li><a href="mailto:info@arkasa.com">info@arkasa.com</a></li><li><span style="color:var(--text-dim)">Raipur, Chhattisgarh</span></li><li><span style="color:var(--text-dim)">India � 492001</span></li></ul></div>
+      </div>
+    </div>
+    <div class="footer-bottom">� 2025 by ARKASA � Space Architecture Design Research Labs. All rights reserved.</div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

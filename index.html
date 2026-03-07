@@ -1,0 +1,248 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>ARKASA � Space Architecture Design Research Labs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<!-- NAV -->
+<header id="navbar">
+  <nav class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/images/logo-white.png" alt="ARKASA"/>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html"        class="nav-link active">Home</a></li>
+      <li><a href="about.html"        class="nav-link">About</a></li>
+      <li><a href="projects.html"    class="nav-link">Projects</a></li>
+      <li><a href="team.html"         class="nav-link">Team</a></li>
+      <li><a href="achievements.html" class="nav-link">Achievements</a></li>
+      <li><a href="events.html"       class="nav-link">Events</a></li>
+      <li><a href="careers.html"      class="nav-link">Careers</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <canvas id="starCanvas"></canvas>
+  <div class="hero-nebula"></div>
+  <div class="hero-content">
+    <h1 class="hero-title">
+      <span class="hero-line"><span class="hero-dim-word">Where</span><span class="hero-grad-word">Science</span></span>
+      <span class="hero-line"><span class="hero-dim-word">Meets</span><span class="hero-grad-word">Design</span></span>
+    </h1>
+    <p class="hero-sub">Uniting architecture with science and sustainability to pioneer<br/>innovative solutions for Space and Earth.</p>
+    <div class="hero-btns">
+      <a href="projects.html" class="btn btn-primary">Explore Our Work</a>
+    </div>
+  </div>
+  <div class="hero-img-wrap">
+    <div class="moon-3d-wrap">
+      <img src="assets/images/moon-3d.png" alt="3D Moon" class="moon-3d"/>
+      <div class="moon-glow"></div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll to Explore</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- RESEARCH FOCUS -->
+<section class="section" style="background:var(--bg-2);">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Research Focus</span>
+      <h2 class="section-title">Three Pillars of <span class="grad-text">Inquiry</span></h2>
+      <p class="section-subtitle">Guiding every design decision we make across space and Earth.</p>
+    </div>
+    <div class="research-cards">
+      <div class="r-card reveal" data-delay="0">
+        <span class="r-icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2a10 10 0 0 1 10 10"/><path d="M12 2a10 10 0 0 0-10 10"/><path d="M2 12a10 10 0 0 0 10 10"/><path d="M22 12a10 10 0 0 1-10 10"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="12" y1="2" x2="12" y2="22"/></svg></span>
+        <span class="r-num">01</span>
+        <h3 class="r-title">Space Architecture</h3>
+        <p class="r-body">Our pioneering work in space architecture focuses on designing adaptive and sustainable habitats for lunar, Martian, and orbital environments. Each system is envisioned as a living organism, harmonizing structure, energy, and human experience. By integrating geometry with aerospace engineering, we craft habitats that not only sustain life beyond Earth but also nurture the spirit of exploration within it.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;"><span class="tag">Lunar Habitats</span><span class="tag">Mars Architecture</span><span class="tag">Orbital Systems</span></div>
+      </div>
+      <div class="r-card reveal" data-delay="150">
+        <span class="r-icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+        <span class="r-num">02</span>
+        <h3 class="r-title">Meta Aeon</h3>
+        <p class="r-body">Our design philosophy is rooted in cosmic architecture — a discipline that bridges universal geometry, energy resonance, and spatial harmony. We translate ancient wisdom into advanced architectural principles that respond to the physics of outer space. Through this synthesis, Arkasa creates environments that transcend material design, connecting human consciousness with the vast continuum of the cosmos.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;"><span class="tag">Cosmic Geometry</span><span class="tag">Energy Resonance</span><span class="tag">Spatial Harmony</span></div>
+      </div>
+      <div class="r-card reveal" data-delay="300">
+        <span class="r-icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22c1.25-1.25 2.08-2.92 2-5 0-4 3-7 7-7s7 3 7 7c.08 2.08-.75 3.75-2 5"/><path d="M6 17c0-4 2-6 6-6"/></svg></span>
+        <span class="r-num">03</span>
+        <h3 class="r-title">Bio-Regenerative</h3>
+        <p class="r-body">In our pursuit of bio-regenerative systems, Arkasa develops self-sustaining ecosystems that mirror the balance of nature. These environments recycle air, water, and energy, fostering resilience and long-term habitation in extraterrestrial and Earth-based settings. Guided by a holistic fusion of science and spirituality, our goal is to cultivate life-supporting habitats that evolve symbiotically with their inhabitants and the cosmos itself.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;"><span class="tag">Closed-Loop Systems</span><span class="tag">Life Support</span><span class="tag">Sustainability</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="nebula-line"></div>
+
+<!-- RESEARCH METHODOLOGY -->
+<section class="section" style="background:var(--bg);">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Process</span>
+      <h2 class="section-title">Research <span class="grad-text">Methodology</span></h2>
+    </div>
+    <div style="width:100%;overflow:hidden;">
+      <svg viewBox="0 0 1400 300" width="100%" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#22d3ee"/>
+            <stop offset="100%" stop-color="#a855f7"/>
+          </linearGradient>
+        </defs>
+        <!-- Wave path -->
+        <path d="M 0,150
+          C 45,30 95,30 140,150
+          C 185,270 235,270 280,150
+          C 325,30 375,30 420,150
+          C 465,270 515,270 560,150
+          C 605,30 655,30 700,150
+          C 745,270 795,270 840,150
+          C 885,30 935,30 980,150
+          C 1025,270 1075,270 1120,150
+          C 1165,30 1215,30 1260,150
+          C 1305,270 1355,270 1400,150"
+          fill="none" stroke="url(#waveGrad)" stroke-width="2.5"/>
+        <!-- Peak circles (top) -->
+        <circle cx="70"   cy="60"  r="5" fill="#22d3ee"/>
+        <circle cx="350"  cy="60"  r="5" fill="#3ab8e6"/>
+        <circle cx="630"  cy="60"  r="5" fill="#6a8fe0"/>
+        <circle cx="910"  cy="60"  r="5" fill="#8e6fdb"/>
+        <circle cx="1190" cy="60"  r="5" fill="#a855f7"/>
+        <!-- Trough circles (bottom) -->
+        <circle cx="210"  cy="240" r="5" fill="#22d3ee"/>
+        <circle cx="490"  cy="240" r="5" fill="#3ab8e6"/>
+        <circle cx="770"  cy="240" r="5" fill="#6a8fe0"/>
+        <circle cx="1050" cy="240" r="5" fill="#8e6fdb"/>
+        <circle cx="1330" cy="240" r="5" fill="#a855f7"/>
+        <!-- Peak labels (above) -->
+        <text x="70"   y="38"  text-anchor="middle" fill="#e2e8f0" font-size="13" font-family="Rajdhani,sans-serif" font-weight="600">Observe</text>
+        <text x="70"   y="22"  text-anchor="middle" fill="#22d3ee" font-size="10" font-family="Rajdhani,sans-serif">01</text>
+        <text x="350"  y="38"  text-anchor="middle" fill="#e2e8f0" font-size="13" font-family="Rajdhani,sans-serif" font-weight="600">Conceptualize</text>
+        <text x="350"  y="22"  text-anchor="middle" fill="#3ab8e6" font-size="10" font-family="Rajdhani,sans-serif">03</text>
+        <text x="630"  y="38"  text-anchor="middle" fill="#e2e8f0" font-size="13" font-family="Rajdhani,sans-serif" font-weight="600">Model &amp; Test</text>
+        <text x="630"  y="22"  text-anchor="middle" fill="#6a8fe0" font-size="10" font-family="Rajdhani,sans-serif">05</text>
+        <text x="910"  y="38"  text-anchor="middle" fill="#e2e8f0" font-size="13" font-family="Rajdhani,sans-serif" font-weight="600">Validate</text>
+        <text x="910"  y="22"  text-anchor="middle" fill="#8e6fdb" font-size="10" font-family="Rajdhani,sans-serif">07</text>
+        <text x="1190" y="38"  text-anchor="middle" fill="#e2e8f0" font-size="13" font-family="Rajdhani,sans-serif" font-weight="600">Publish</text>
+        <text x="1190" y="22"  text-anchor="middle" fill="#a855f7" font-size="10" font-family="Rajdhani,sans-serif">09</text>
+        <!-- Trough labels (below) -->
+        <text x="210"  y="263" text-anchor="middle" fill="#22d3ee" font-size="10" font-family="Rajdhani,sans-serif">02</text>
+        <text x="210"  y="279" text-anchor="middle" fill="#e2e8f0" font-size="13" font-family="Rajdhani,sans-serif" font-weight="600">Research</text>
+        <text x="490"  y="263" text-anchor="middle" fill="#3ab8e6" font-size="10" font-family="Rajdhani,sans-serif">04</text>
+        <text x="490"  y="279" text-anchor="middle" fill="#e2e8f0" font-size="13" font-family="Rajdhani,sans-serif" font-weight="600">Design</text>
+        <text x="770"  y="263" text-anchor="middle" fill="#6a8fe0" font-size="10" font-family="Rajdhani,sans-serif">06</text>
+        <text x="770"  y="279" text-anchor="middle" fill="#e2e8f0" font-size="13" font-family="Rajdhani,sans-serif" font-weight="600">Simulate</text>
+        <text x="1050" y="263" text-anchor="middle" fill="#8e6fdb" font-size="10" font-family="Rajdhani,sans-serif">08</text>
+        <text x="1050" y="279" text-anchor="middle" fill="#e2e8f0" font-size="13" font-family="Rajdhani,sans-serif" font-weight="600">Iterate</text>
+        <text x="1330" y="263" text-anchor="middle" fill="#a855f7" font-size="10" font-family="Rajdhani,sans-serif">10</text>
+        <text x="1330" y="279" text-anchor="middle" fill="#e2e8f0" font-size="13" font-family="Rajdhani,sans-serif" font-weight="600">Implement</text>
+      </svg>
+    </div>
+  </div>
+</section>
+<div class="nebula-line"></div>
+
+<!-- AFFILIATIONS -->
+<section class="section" style="background:var(--bg-2);">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Official Affiliations</span>
+      <h2 class="section-title">Recognized by <span class="grad-text">India's Space Sector</span></h2>
+    </div>
+    <div class="affiliations-grid reveal">
+      <div class="aff-card">
+        <div class="aff-logo"><img src="assets/images/isro.png" alt="ISRO"/></div>
+        <p class="aff-name">Indian Space Research Organisation</p>
+        <p class="aff-role">Registered Space Tutor</p>
+        <p class="aff-desc">Arkasa is a Registered Space Tutor under ISRO � India's national space agency � recognized for our contributions to space education, awareness, and architectural research aligned with India's space mission objectives.</p>
+      </div>
+      <div class="aff-card">
+        <div class="aff-logo"><img src="assets/images/inspace.png" alt="IN-SPACe"/></div>
+        <p class="aff-name">IN-SPACe</p>
+        <p class="aff-role">Space Sector Affiliate</p>
+        <p class="aff-desc">Indian National Space Promotion and Authorisation Centre (IN-SPACe) promotes, enables, and authorises space activities by non-governmental entities in India. Arkasa is proud to be affiliated with IN-SPACe as we work to advance India's space architecture capabilities.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="nebula-line"></div>
+
+<!-- COLLABORATORS -->
+<section class="section" style="background:var(--bg);">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Collaborators</span>
+      <h2 class="section-title">Our <span class="grad-text">Global Partners</span></h2>
+    </div>
+    <div class="collab-strip reveal">
+      <div class="collab-logo"><img src="assets/images/collab-itm.png" alt="ITM University"/></div>
+      <div class="collab-logo"><img src="assets/images/collab-stardust.png" alt="STARDUST"/></div>
+      <div class="collab-logo"><img src="assets/images/collab-habitat-marte.png" alt="Habitat Marte"/></div>
+      <div class="collab-logo"><img src="assets/images/collab-beyond-space.png" alt="Beyond Space"/></div>
+    </div>
+  </div>
+</section>
+<div class="nebula-line"></div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/images/logo-white.png" alt="ARKASA" class="footer-logo"/>
+        <p class="footer-tagline">Space Architecture<br/>Design Research Labs</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="mailto:info@arkasa.com">info@arkasa.com</a></li>
+            <li><span style="color:var(--text-dim)">Raipur, Chhattisgarh</span></li>
+            <li><span style="color:var(--text-dim)">India � 492001</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">� 2025 by ARKASA � Space Architecture Design Research Labs. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
