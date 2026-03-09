@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Our Team � ARKASA</title>
+  <title>Our Team — ARKASA</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet"/>
@@ -20,6 +20,7 @@
       <li><a href="achievements.html" class="nav-link">Achievements</a></li>
       <li><a href="events.html"       class="nav-link">Events</a></li>
       <li><a href="careers.html"      class="nav-link">Careers</a></li>
+      <li><a href="contact.html"      class="nav-link">Contact</a></li>
     </ul>
     <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
   </nav>
@@ -88,69 +89,82 @@
       <p class="section-subtitle">Distinguished researchers, explorers, and innovators who guide and support ARKASA's mission.</p>
     </div>
 
-    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:28px;">
+    <div class="advisor-grid">
 
-      <div class="reveal" data-delay="0" style="flex:0 0 calc(33.333% - 19px);min-width:300px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;padding:36px 32px;display:flex;flex-direction:column;gap:16px;transition:border-color .3s,box-shadow .3s;" onmouseenter="this.style.borderColor='rgba(34,211,238,.35)'" onmouseleave="this.style.borderColor='var(--border)'">
-        <div style="display:flex;align-items:center;gap:16px;">
-          <img src="assets/images/adv-mohana.png" alt="Mohana Sai Akula" style="width:64px;height:64px;border-radius:50%;object-fit:cover;object-position:top;border:2px solid rgba(34,211,238,.3);flex-shrink:0;"/>
+      <div class="adv-card reveal" data-delay="0">
+        <div class="adv-header">
+          <img src="assets/images/adv-mohana.png" alt="Mohana Sai Akula" class="adv-avatar"/>
           <div>
-            <h3 style="font-family:'Orbitron',sans-serif;font-size:.9rem;font-weight:700;color:#fff;margin-bottom:4px;">Mohana Sai Akula</h3>
-            <span style="font-family:'Rajdhani',sans-serif;font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#a855f7;">&#8220;Trine&#8221;</span>
+            <h3 class="adv-name">Mohana Sai Akula</h3>
+            <span class="adv-title">Space Biotech and Biomedical Expert</span>
           </div>
         </div>
-        <p style="font-family:'Rajdhani',sans-serif;font-size:.82rem;font-weight:600;color:rgba(34,211,238,.8);letter-spacing:.03em;line-height:1.5;">Research Scientist-I (Non-Medical), Centre for Advanced Research, Institute of Aerospace Medicine, IAF, Bengaluru, India</p>
-        <p style="color:var(--text-muted);font-size:.875rem;line-height:1.85;">Mohana Sai Akula is an Indian space science researcher and astronaut candidate selected by Titans Space Industries, USA, for their 2029 inaugural spaceflight mission. He is India's first civilian scientist to participate in the government space analog mission Anugami-2025. A Master's scholar in Astrobiology and Space Science, his work focuses on astrobiology mission design, lunar botany, and space agriculture. He is an ISRO NSSS 2024 awardee, an Indian Ambassador for LunAres Research Station, Poland, and has represented India in two international lunar analog missions (2023 &amp; 2024).</p>
+        <p class="adv-pos">Research Scientist-I (Non-Medical), Centre for Advanced Research, Institute of Aerospace Medicine, IAF, Bengaluru, India</p>
+        <p class="adv-bio">Mohana Sai Akula is an Indian space science researcher and astronaut candidate selected by Titans Space Industries, USA, for their 2029 inaugural spaceflight mission. He is India's first civilian scientist to participate in the government space analog mission Anugami-2025. A Master's scholar in Astrobiology and Space Science, his work focuses on astrobiology mission design, lunar botany, and space agriculture. He is an ISRO NSSS 2024 awardee, an Indian Ambassador for LunAres Research Station, Poland, and has represented India in two international lunar analog missions (2023 &amp; 2024).</p>
       </div>
 
-      <div class="reveal" data-delay="100" style="flex:0 0 calc(33.333% - 19px);min-width:300px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;padding:36px 32px;display:flex;flex-direction:column;gap:16px;transition:border-color .3s,box-shadow .3s;" onmouseenter="this.style.borderColor='rgba(34,211,238,.35)'" onmouseleave="this.style.borderColor='var(--border)'">
-        <div style="display:flex;align-items:center;gap:16px;">
-          <img src="assets/images/adv-ananda.png" alt="Ananda Padmanabhan" style="width:64px;height:64px;border-radius:50%;object-fit:cover;object-position:top;border:2px solid rgba(34,211,238,.3);flex-shrink:0;"/>
+      <div class="adv-card reveal" data-delay="100">
+        <div class="adv-header">
+          <img src="assets/images/adv-ananda.png" alt="Ananda Padmanabhan" class="adv-avatar"/>
           <div>
-            <h3 style="font-family:'Orbitron',sans-serif;font-size:.9rem;font-weight:700;color:#fff;margin-bottom:4px;">Ananda Padmanabhan</h3>
-            <span style="font-family:'Rajdhani',sans-serif;font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#a855f7;">Space Biotechnologist &amp; Researcher</span>
+            <h3 class="adv-name">Ananda Padmanabhan</h3>
+            <span class="adv-title">Space Biotechnologist &amp; Researcher</span>
           </div>
         </div>
-        <p style="font-family:'Rajdhani',sans-serif;font-size:.82rem;font-weight:600;color:rgba(34,211,238,.8);letter-spacing:.03em;line-height:1.5;">Space Biotechnologist | Researcher</p>
-        <p style="color:var(--text-muted);font-size:.875rem;line-height:1.85;">Ananda Padmanabhan is a space biotechnology researcher and advocate for space life sciences from India. He is currently pursuing his Master's at Julius-Maximilians-Universit&#228;t W&#252;rzburg, Germany. He works with Arkasa Space Architecture Labs as a space biotechnology researcher and serves as a habitat coordinator in one of the world's largest analog research environments. His work focuses on regenerative space habitats, astrobiology, and life-support systems for future space missions.</p>
+        <p class="adv-pos">Space Biotechnologist | Researcher</p>
+        <p class="adv-bio">Ananda Padmanabhan is a space biotechnology researcher and advocate for space life sciences from India. He is currently pursuing his Master's at Julius-Maximilians-Universit&#228;t W&#252;rzburg, Germany. He works with Arkasa Space Architecture Labs as a space biotechnology researcher and serves as a habitat coordinator in one of the world's largest analog research environments. His work focuses on regenerative space habitats, astrobiology, and life-support systems for future space missions.</p>
       </div>
 
-      <div class="reveal" data-delay="200" style="flex:0 0 calc(33.333% - 19px);min-width:300px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;padding:36px 32px;display:flex;flex-direction:column;gap:16px;transition:border-color .3s,box-shadow .3s;" onmouseenter="this.style.borderColor='rgba(34,211,238,.35)'" onmouseleave="this.style.borderColor='var(--border)'">
-        <div style="display:flex;align-items:center;gap:16px;">
-          <img src="assets/images/adv-kristine.png" alt="Kristine Atienza" style="width:64px;height:64px;border-radius:50%;object-fit:cover;object-position:top;border:2px solid rgba(34,211,238,.3);flex-shrink:0;"/>
+      <div class="adv-card reveal" data-delay="200">
+        <div class="adv-header">
+          <img src="assets/images/adv-kristine.png" alt="Kristine Atienza" class="adv-avatar"/>
           <div>
-            <h3 style="font-family:'Orbitron',sans-serif;font-size:.9rem;font-weight:700;color:#fff;margin-bottom:4px;">Kristine Atienza</h3>
-            <span style="font-family:'Rajdhani',sans-serif;font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#a855f7;">Founder | Space Nutritionist | Analog Astronaut</span>
+            <h3 class="adv-name">Kristine Atienza</h3>
+            <span class="adv-title">Founder | Space Nutritionist | Analog Astronaut</span>
           </div>
         </div>
-        <p style="font-family:'Rajdhani',sans-serif;font-size:.82rem;font-weight:600;color:rgba(34,211,238,.8);letter-spacing:.03em;line-height:1.5;">Founder, Space Nutrition Network</p>
-        <p style="color:var(--text-muted);font-size:.875rem;line-height:1.85;">Kristine Atienza is a public health nutritionist, innovator, and founder of the Space Nutrition Network. With over eight years of experience in food systems and public health programs, she has worked on national and international initiatives related to nutrition and food security. She is recognized as the first Filipino analog astronaut and is actively advancing research on space food systems and astronaut nutrition for long-duration missions.</p>
+        <p class="adv-pos">Founder, Space Nutrition Network</p>
+        <p class="adv-bio">Kristine Atienza is a public health nutritionist, innovator, and founder of the Space Nutrition Network. With over eight years of experience in food systems and public health programs, she has worked on national and international initiatives related to nutrition and food security. She is recognized as the first Filipino analog astronaut and is actively advancing research on space food systems and astronaut nutrition for long-duration missions.</p>
       </div>
 
-      <div class="reveal" data-delay="300" style="flex:0 0 calc(33.333% - 19px);min-width:300px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;padding:36px 32px;display:flex;flex-direction:column;gap:16px;transition:border-color .3s,box-shadow .3s;" onmouseenter="this.style.borderColor='rgba(34,211,238,.35)'" onmouseleave="this.style.borderColor='var(--border)'">
-        <div style="display:flex;align-items:center;gap:16px;">
-          <img src="assets/images/adv-ismail.png" alt="Ismail El Omari" style="width:64px;height:64px;border-radius:50%;object-fit:cover;object-position:top;border:2px solid rgba(34,211,238,.3);flex-shrink:0;"/>
+      <div class="adv-card reveal" data-delay="300">
+        <div class="adv-header">
+          <img src="assets/images/adv-ismail.png" alt="Ismail El Omari" class="adv-avatar"/>
           <div>
-            <h3 style="font-family:'Orbitron',sans-serif;font-size:.9rem;font-weight:700;color:#fff;margin-bottom:4px;">Ismail El Omari</h3>
-            <span style="font-family:'Rajdhani',sans-serif;font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#a855f7;">Analog Astronaut | Space Architect</span>
+            <h3 class="adv-name">Ismail El Omari</h3>
+            <span class="adv-title">Analog Astronaut | Space Architect</span>
           </div>
         </div>
-        <p style="font-family:'Rajdhani',sans-serif;font-size:.82rem;font-weight:600;color:rgba(34,211,238,.8);letter-spacing:.03em;line-height:1.5;">Analog Astronaut | Space Architect</p>
-        <p style="color:var(--text-muted);font-size:.875rem;line-height:1.85;">Ismail El Omari is a Moroccan analog astronaut, space architect, and advocate for human space exploration. He has participated in Mars analog missions, conducting research and operational tasks in isolated environments that simulate extraterrestrial conditions. With a background in architecture and space habitats, he works to promote innovation in space design and inspires the next generation through educational initiatives such as AstroKids.</p>
+        <p class="adv-pos">Analog Astronaut | Space Architect</p>
+        <p class="adv-bio">Ismail El Omari is a Moroccan analog astronaut, space architect, and advocate for human space exploration. He has participated in Mars analog missions, conducting research and operational tasks in isolated environments that simulate extraterrestrial conditions. With a background in architecture and space habitats, he works to promote innovation in space design and inspires the next generation through educational initiatives such as AstroKids.</p>
       </div>
 
-      <div class="reveal" data-delay="400" style="flex:0 0 calc(33.333% - 19px);min-width:300px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;padding:36px 32px;display:flex;flex-direction:column;gap:16px;transition:border-color .3s,box-shadow .3s;" onmouseenter="this.style.borderColor='rgba(34,211,238,.35)'" onmouseleave="this.style.borderColor='var(--border)'">
-        <div style="display:flex;align-items:center;gap:16px;">
-          <img src="assets/images/adv-jason.png" alt="Jason Michaud" style="width:64px;height:64px;border-radius:50%;object-fit:cover;object-position:top;border:2px solid rgba(34,211,238,.3);flex-shrink:0;"/>
+      <div class="adv-card reveal" data-delay="400">
+        <div class="adv-header">
+          <img src="assets/images/adv-jason.png" alt="Jason Michaud" class="adv-avatar"/>
           <div>
-            <h3 style="font-family:'Orbitron',sans-serif;font-size:.9rem;font-weight:700;color:#fff;margin-bottom:4px;">Jason Michaud</h3>
-            <span style="font-family:'Rajdhani',sans-serif;font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#a855f7;">Founder &amp; CEO, Stardust Inc. | Astronaut Candidate</span>
+            <h3 class="adv-name">Jason Michaud</h3>
+            <span class="adv-title">Founder &amp; CEO, Stardust Inc. | Astronaut Candidate</span>
           </div>
         </div>
-        <p style="font-family:'Rajdhani',sans-serif;font-size:.82rem;font-weight:600;color:rgba(34,211,238,.8);letter-spacing:.03em;line-height:1.5;">Founder &amp; CEO, Stardust Inc.</p>
-        <p style="color:var(--text-muted);font-size:.875rem;line-height:1.85;">Jason Michaud is the founder and CEO of Stardust Inc., an organization dedicated to making space accessible to people around the world. With extensive experience in microgravity, lunar, and Martian flight simulations, he is actively training to become a private astronaut. Through Stardust Odyssey, he leads global collaborations with space agencies, industry leaders, and international organizations to support workforce development, analog missions, and the future of human space exploration.</p>
+        <p class="adv-pos">Founder &amp; CEO, Stardust Inc.</p>
+        <p class="adv-bio">Jason Michaud is the founder and CEO of Stardust Inc., an organization dedicated to making space accessible to people around the world. With extensive experience in microgravity, lunar, and Martian flight simulations, he is actively training to become a private astronaut. Through Stardust Odyssey, he leads global collaborations with space agencies, industry leaders, and international organizations to support workforce development, analog missions, and the future of human space exploration.</p>
+      </div>
+
+      <div class="adv-card reveal" data-delay="500">
+        <div class="adv-header">
+          <img src="assets/images/Ar. Krishna Murthy .png" alt="Ar. Krishna Murthy" class="adv-avatar"/>
+          <div>
+            <h3 class="adv-name">Ar. Krishna Murthy</h3>
+            <span class="adv-title">Principal Architect | Folds Design Studio</span>
+          </div>
+        </div>
+        <p class="adv-pos">Principal Architect | Folds Design Studio</p>
+        <p class="adv-bio">Krishna Murthy is an Indian architect and the founder of Folds Design Studio, an innovative architectural practice based in Navi Mumbai. His work focuses on integrating advanced digital technologies such as AI, parametric design, and digital fabrication to create future-forward built environments. Alongside his professional practice, he is a sought-after educator and speaker who conducts workshops across India on parametric design and computational architecture. Through his work and mentorship, he continues to inspire the next generation of architects while shaping a technologically driven future for the built environment.</p>
       </div>
 
     </div>
+
   </div>
 </section>
 <div class="nebula-line"></div>
@@ -162,10 +176,10 @@
       <div class="footer-cols">
         <div class="footer-col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="projects.html">Projects</a></li></ul></div>
         <div class="footer-col"><h4>Explore</h4><ul><li><a href="team.html">Team</a></li><li><a href="achievements.html">Achievements</a></li><li><a href="events.html">Events</a></li></ul></div>
-        <div class="footer-col"><h4>Connect</h4><ul><li><a href="careers.html">Careers</a></li><li><a href="mailto:info@arkasa.com">info@arkasa.com</a></li><li><span style="color:var(--text-dim)">Raipur, Chhattisgarh</span></li><li><span style="color:var(--text-dim)">India &#8212; 492001</span></li></ul></div>
+        <div class="footer-col"><h4>Connect</h4><ul><li><a href="contact.html">Contact Us</a></li><li><a href="careers.html">Careers</a></li><li><a href="mailto:info@arkasa.com">info@arkasa.com</a></li><li><span style="color:var(--text-dim)">Raipur, Chhattisgarh</span></li><li><span style="color:var(--text-dim)">India 492001</span></li></ul></div>
       </div>
     </div>
-    <div class="footer-bottom">&#169; 2025 by ARKASA &#8212; Space Architecture Design Research Labs. All rights reserved.</div>
+    <div class="footer-bottom">&#169; 2025 by ARKASA Space Architecture Design Research Labs. All rights reserved.</div>
   </div>
 </footer>
 <script src="script.js"></script>

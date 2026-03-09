@@ -214,4 +214,4 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
   };
 })();
 
-console.log('%c✦ ARKASA — Space Architecture Design Research Labs','font-family:monospace;font-size:13px;color:#22d3ee;font-weight:bold;');
+console.log('%c✦ ARKASA Space Architecture Design Research Labs','font-family:monospace;font-size:13px;color:#22d3ee;font-weight:bold;');

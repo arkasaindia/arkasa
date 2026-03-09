@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>ARKASA � Space Architecture Design Research Labs</title>
+  <title>ARKASA Space Architecture Design Research Labs</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet"/>
@@ -25,6 +25,7 @@
       <li><a href="achievements.html" class="nav-link">Achievements</a></li>
       <li><a href="events.html"       class="nav-link">Events</a></li>
       <li><a href="careers.html"      class="nav-link">Careers</a></li>
+      <li><a href="contact.html"      class="nav-link">Contact</a></li>
     </ul>
     <button class="hamburger" id="hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -48,7 +49,9 @@
   </div>
   <div class="hero-img-wrap">
     <div class="moon-3d-wrap">
-      <img src="assets/images/moon-3d.png" alt="3D Moon" class="moon-3d"/>
+      <video class="moon-3d" autoplay loop muted playsinline>
+        <source src="assets/images/vecteezy_one-minute-moon-rotate-loop_5357501.mp4" type="video/mp4"/>
+      </video>
       <div class="moon-glow"></div>
     </div>
   </div>
@@ -134,27 +137,27 @@
         <circle cx="1050" cy="240" r="5" fill="#8e6fdb"/>
         <circle cx="1330" cy="240" r="5" fill="#a855f7"/>
         <!-- Peak labels (above) -->
-        <text x="70"   y="38"  text-anchor="middle" fill="#e2e8f0" font-size="13" font-family="Rajdhani,sans-serif" font-weight="600">Observe</text>
-        <text x="70"   y="22"  text-anchor="middle" fill="#22d3ee" font-size="10" font-family="Rajdhani,sans-serif">01</text>
-        <text x="350"  y="38"  text-anchor="middle" fill="#e2e8f0" font-size="13" font-family="Rajdhani,sans-serif" font-weight="600">Conceptualize</text>
-        <text x="350"  y="22"  text-anchor="middle" fill="#3ab8e6" font-size="10" font-family="Rajdhani,sans-serif">03</text>
-        <text x="630"  y="38"  text-anchor="middle" fill="#e2e8f0" font-size="13" font-family="Rajdhani,sans-serif" font-weight="600">Model &amp; Test</text>
-        <text x="630"  y="22"  text-anchor="middle" fill="#6a8fe0" font-size="10" font-family="Rajdhani,sans-serif">05</text>
-        <text x="910"  y="38"  text-anchor="middle" fill="#e2e8f0" font-size="13" font-family="Rajdhani,sans-serif" font-weight="600">Validate</text>
-        <text x="910"  y="22"  text-anchor="middle" fill="#8e6fdb" font-size="10" font-family="Rajdhani,sans-serif">07</text>
-        <text x="1190" y="38"  text-anchor="middle" fill="#e2e8f0" font-size="13" font-family="Rajdhani,sans-serif" font-weight="600">Publish</text>
-        <text x="1190" y="22"  text-anchor="middle" fill="#a855f7" font-size="10" font-family="Rajdhani,sans-serif">09</text>
+        <text x="70"   y="38"  text-anchor="middle" fill="#ffffff" font-size="16" font-family="Rajdhani,sans-serif" font-weight="700">Observe</text>
+        <text x="70"   y="20"  text-anchor="middle" fill="#22d3ee" font-size="12" font-family="Rajdhani,sans-serif" font-weight="600">01</text>
+        <text x="350"  y="38"  text-anchor="middle" fill="#ffffff" font-size="16" font-family="Rajdhani,sans-serif" font-weight="700">Conceptualize</text>
+        <text x="350"  y="20"  text-anchor="middle" fill="#3ab8e6" font-size="12" font-family="Rajdhani,sans-serif" font-weight="600">03</text>
+        <text x="630"  y="38"  text-anchor="middle" fill="#ffffff" font-size="16" font-family="Rajdhani,sans-serif" font-weight="700">Model &amp; Test</text>
+        <text x="630"  y="20"  text-anchor="middle" fill="#6a8fe0" font-size="12" font-family="Rajdhani,sans-serif" font-weight="600">05</text>
+        <text x="910"  y="38"  text-anchor="middle" fill="#ffffff" font-size="16" font-family="Rajdhani,sans-serif" font-weight="700">Validate</text>
+        <text x="910"  y="20"  text-anchor="middle" fill="#8e6fdb" font-size="12" font-family="Rajdhani,sans-serif" font-weight="600">07</text>
+        <text x="1190" y="38"  text-anchor="middle" fill="#ffffff" font-size="16" font-family="Rajdhani,sans-serif" font-weight="700">Publish</text>
+        <text x="1190" y="20"  text-anchor="middle" fill="#a855f7" font-size="12" font-family="Rajdhani,sans-serif" font-weight="600">09</text>
         <!-- Trough labels (below) -->
-        <text x="210"  y="263" text-anchor="middle" fill="#22d3ee" font-size="10" font-family="Rajdhani,sans-serif">02</text>
-        <text x="210"  y="279" text-anchor="middle" fill="#e2e8f0" font-size="13" font-family="Rajdhani,sans-serif" font-weight="600">Research</text>
-        <text x="490"  y="263" text-anchor="middle" fill="#3ab8e6" font-size="10" font-family="Rajdhani,sans-serif">04</text>
-        <text x="490"  y="279" text-anchor="middle" fill="#e2e8f0" font-size="13" font-family="Rajdhani,sans-serif" font-weight="600">Design</text>
-        <text x="770"  y="263" text-anchor="middle" fill="#6a8fe0" font-size="10" font-family="Rajdhani,sans-serif">06</text>
-        <text x="770"  y="279" text-anchor="middle" fill="#e2e8f0" font-size="13" font-family="Rajdhani,sans-serif" font-weight="600">Simulate</text>
-        <text x="1050" y="263" text-anchor="middle" fill="#8e6fdb" font-size="10" font-family="Rajdhani,sans-serif">08</text>
-        <text x="1050" y="279" text-anchor="middle" fill="#e2e8f0" font-size="13" font-family="Rajdhani,sans-serif" font-weight="600">Iterate</text>
-        <text x="1330" y="263" text-anchor="middle" fill="#a855f7" font-size="10" font-family="Rajdhani,sans-serif">10</text>
-        <text x="1330" y="279" text-anchor="middle" fill="#e2e8f0" font-size="13" font-family="Rajdhani,sans-serif" font-weight="600">Implement</text>
+        <text x="210"  y="263" text-anchor="middle" fill="#22d3ee" font-size="12" font-family="Rajdhani,sans-serif" font-weight="600">02</text>
+        <text x="210"  y="281" text-anchor="middle" fill="#ffffff" font-size="16" font-family="Rajdhani,sans-serif" font-weight="700">Research</text>
+        <text x="490"  y="263" text-anchor="middle" fill="#3ab8e6" font-size="12" font-family="Rajdhani,sans-serif" font-weight="600">04</text>
+        <text x="490"  y="281" text-anchor="middle" fill="#ffffff" font-size="16" font-family="Rajdhani,sans-serif" font-weight="700">Design</text>
+        <text x="770"  y="263" text-anchor="middle" fill="#6a8fe0" font-size="12" font-family="Rajdhani,sans-serif" font-weight="600">06</text>
+        <text x="770"  y="281" text-anchor="middle" fill="#ffffff" font-size="16" font-family="Rajdhani,sans-serif" font-weight="700">Simulate</text>
+        <text x="1050" y="263" text-anchor="middle" fill="#8e6fdb" font-size="12" font-family="Rajdhani,sans-serif" font-weight="600">08</text>
+        <text x="1050" y="281" text-anchor="middle" fill="#ffffff" font-size="16" font-family="Rajdhani,sans-serif" font-weight="700">Iterate</text>
+        <text x="1330" y="263" text-anchor="middle" fill="#a855f7" font-size="12" font-family="Rajdhani,sans-serif" font-weight="600">10</text>
+        <text x="1330" y="281" text-anchor="middle" fill="#ffffff" font-size="16" font-family="Rajdhani,sans-serif" font-weight="700">Implement</text>
       </svg>
     </div>
   </div>
@@ -173,7 +176,7 @@
         <div class="aff-logo"><img src="assets/images/isro.png" alt="ISRO"/></div>
         <p class="aff-name">Indian Space Research Organisation</p>
         <p class="aff-role">Registered Space Tutor</p>
-        <p class="aff-desc">Arkasa is a Registered Space Tutor under ISRO � India's national space agency � recognized for our contributions to space education, awareness, and architectural research aligned with India's space mission objectives.</p>
+        <p class="aff-desc">Arkasa is a Registered Space Tutor under ISRO, India's national space agency, recognized for our contributions to space education, awareness, and architectural research aligned with India's space mission objectives.</p>
       </div>
       <div class="aff-card">
         <div class="aff-logo"><img src="assets/images/inspace.png" alt="IN-SPACe"/></div>
@@ -198,6 +201,7 @@
       <div class="collab-logo"><img src="assets/images/collab-stardust.png" alt="STARDUST"/></div>
       <div class="collab-logo"><img src="assets/images/collab-habitat-marte.png" alt="Habitat Marte"/></div>
       <div class="collab-logo"><img src="assets/images/collab-beyond-space.png" alt="Beyond Space"/></div>
+      <div class="collab-logo"><img src="assets/images/FOLDS LOGO for collaboration .png" alt="Folds Design Studio"/></div>
     </div>
   </div>
 </section>
@@ -226,20 +230,20 @@
             <li><a href="team.html">Team</a></li>
             <li><a href="achievements.html">Achievements</a></li>
             <li><a href="events.html">Events</a></li>
-            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Connect</h4>
           <ul>
+            <li><a href="contact.html">Contact Us</a></li>
             <li><a href="mailto:info@arkasa.com">info@arkasa.com</a></li>
             <li><span style="color:var(--text-dim)">Raipur, Chhattisgarh</span></li>
-            <li><span style="color:var(--text-dim)">India � 492001</span></li>
+            <li><span style="color:var(--text-dim)">India 492001</span></li>
           </ul>
         </div>
       </div>
     </div>
-    <div class="footer-bottom">� 2025 by ARKASA � Space Architecture Design Research Labs. All rights reserved.</div>
+    <div class="footer-bottom">© 2025 by ARKASA Space Architecture Design Research Labs. All rights reserved.</div>
   </div>
 </footer>
 
