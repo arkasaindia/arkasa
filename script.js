@@ -20,8 +20,8 @@
   const btn = document.getElementById('hamburger');
   const links = document.getElementById('navLinks');
   if(!btn||!links) return;
-  btn.addEventListener('click', () => { btn.classList.toggle('open'); links.classList.toggle('open'); });
-  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { btn.classList.remove('open'); links.classList.remove('open'); }));
+  btn.addEventListener('click', () => { btn.classList.toggle('open'); links.classList.toggle('open'); document.body.classList.toggle('nav-open'); });
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { btn.classList.remove('open'); links.classList.remove('open'); document.body.classList.remove('nav-open'); }));
 })();
 
 // 3. SCROLL REVEAL

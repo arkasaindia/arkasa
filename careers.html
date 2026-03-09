@@ -18,6 +18,17 @@
     .cjoin-pill:hover{border-color:rgba(34,211,238,.4);color:#fff;}
     .cjoin-note{margin-top:28px;padding:20px 24px;background:rgba(168,85,247,.06);border:1px solid rgba(168,85,247,.2);border-radius:4px;font-family:'Rajdhani',sans-serif;font-size:.88rem;color:rgba(255,255,255,.55);line-height:1.7;}
     @media(max-width:768px){.cjoin-inner{grid-template-columns:1fr;gap:40px;}}
+    @media(max-width:480px){
+      .pos-header{padding:22px 20px 16px;}
+      .pos-body{padding:0 20px 24px;}
+      .pos-title{font-size:.95rem;}
+      .pos-apply-row{flex-direction:column;align-items:flex-start;gap:12px;}
+      .pos-apply-btn{width:100%;text-align:center;}
+    }
+    @media(max-width:380px){
+      .pos-header{padding:18px 16px 14px;}
+      .pos-body{padding:0 16px 20px;}
+    }
     /* Position cards */
     .positions-grid{display:grid;grid-template-columns:1fr;gap:0;}
     .pos-card{background:var(--bg-card);border:1px solid var(--border);border-radius:6px;overflow:hidden;transition:border-color .3s,box-shadow .3s;margin-bottom:24px;}
@@ -63,6 +74,7 @@
       <li><a href="achievements.html" class="nav-link">Achievements</a></li>
       <li><a href="events.html"       class="nav-link">Events</a></li>
       <li><a href="careers.html"      class="nav-link active">Careers</a></li>
+      <li><a href="contact.html"      class="nav-link">Contact</a></li>
     </ul>
     <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
   </nav>
@@ -256,10 +268,10 @@
       <div class="footer-cols">
         <div class="footer-col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="projects.html">Projects</a></li></ul></div>
         <div class="footer-col"><h4>Explore</h4><ul><li><a href="team.html">Team</a></li><li><a href="achievements.html">Achievements</a></li><li><a href="events.html">Events</a></li></ul></div>
-        <div class="footer-col"><h4>Connect</h4><ul><li><a href="careers.html">Careers</a></li><li><a href="mailto:info@arkasa.com">info@arkasa.com</a></li><li><span style="color:var(--text-dim)">Raipur, Chhattisgarh</span></li></ul></div>
+        <div class="footer-col"><h4>Connect</h4><ul><li><a href="contact.html">Contact Us</a></li><li><a href="careers.html">Careers</a></li><li><a href="mailto:info@arkasa.com">info@arkasa.com</a></li><li><span style="color:var(--text-dim)">Raipur, Chhattisgarh</span></li></ul></div>
       </div>
     </div>
-    <div class="footer-bottom">&#169; 2025 by ARKASA &#8212; Space Architecture Design Research Labs. All rights reserved.</div>
+    <div class="footer-bottom">&#169; 2025 by ARKASA Space Architecture Design Research Labs. All rights reserved.</div>
   </div>
 </footer>
 <script src="script.js"></script>

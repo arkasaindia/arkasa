@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
@@ -44,6 +44,13 @@
       .awards-grid{grid-template-columns:1fr;}
       .contrib-grid{grid-template-columns:1fr;}
     }
+    @media(max-width:480px){
+      .stat-item{padding:20px 16px;flex:0 0 calc(50% - 1px);border-bottom:1px solid var(--border);}.stat-num{font-size:1.5rem;}
+      .stat-item:nth-child(even){border-right:none;}
+    }
+    @media(max-width:380px){
+      .stat-item{padding:16px 10px;}.stat-num{font-size:1.2rem;}.stat-lbl{font-size:.7rem;}
+    }
   </style>
 </head>
 <body>
@@ -58,6 +65,7 @@
       <li><a href="achievements.html"   class="nav-link active">Achievements</a></li>
       <li><a href="events.html"         class="nav-link">Events</a></li>
       <li><a href="careers.html"        class="nav-link">Careers</a></li>
+      <li><a href="contact.html"        class="nav-link">Contact</a></li>
     </ul>
     <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
   </nav>
@@ -95,7 +103,7 @@
     <span class="stat-lbl">Research<br/>Papers</span>
   </div>
   <div class="stat-item">
-    <span class="stat-num">5</span>
+    <span class="stat-num">6</span>
     <span class="stat-lbl">Project<br/>Proposals</span>
   </div>
 </div>
@@ -112,7 +120,7 @@
     <div class="awards-grid">
 
       <div class="award-card reveal" data-delay="0">
-        <div class="award-img-wrap"><img src="assets/images/ach-youngachiever.png" alt="Young Achievers Award"/></div>
+        <div class="award-img-wrap"><img src="assets/images/Indian Achievers Forum Award.png" alt="Young Achievers Award"/></div>
         <span class="award-tag">Individual Award</span>
         <div class="award-title">Indian Achievers Forum Award</div>
         <div class="award-who">Arshleen Kaur Sahni</div>
@@ -120,7 +128,7 @@
       </div>
 
       <div class="award-card reveal" data-delay="100">
-        <div class="award-img-wrap"><img src="assets/images/ach-tedx-award.png" alt="TEDx Flame University"/></div>
+        <div class="award-img-wrap"><img src="assets/images/TEDx Talks Flames — From Dreaming of Space to Crafting It.png" alt="TEDx Flame University"/></div>
         <span class="award-tag">Speaking Honour</span>
         <div class="award-title">TEDx Talks Flames — "From Dreaming of Space to Crafting It"</div>
         <div class="award-who">Arshleen Kaur Sahni</div>
@@ -128,7 +136,7 @@
       </div>
 
       <div class="award-card reveal" data-delay="200">
-        <div class="award-img-wrap"><img src="assets/images/ach-flag-hiseas.png" alt="India at HI-SEAS"/></div>
+        <div class="award-img-wrap"><img src="assets/images/Represented India at HI-SEAS Analog Astronaut Mission, Hawaii.png" alt="India at HI-SEAS"/></div>
         <span class="award-tag violet">International</span>
         <div class="award-title">Represented India at HI-SEAS Analog Astronaut Mission, Hawaii</div>
         <div class="award-who">Aagam Jain</div>
@@ -296,10 +304,10 @@
       <div class="footer-cols">
         <div class="footer-col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="projects.html">Projects</a></li></ul></div>
         <div class="footer-col"><h4>Explore</h4><ul><li><a href="team.html">Team</a></li><li><a href="achievements.html">Achievements</a></li><li><a href="events.html">Events</a></li></ul></div>
-        <div class="footer-col"><h4>Connect</h4><ul><li><a href="mailto:info@arkasa.com">info@arkasa.com</a></li><li><span style="color:var(--text-dim)">Raipur, Chhattisgarh</span></li><li><span style="color:var(--text-dim)">India — 492001</span></li></ul></div>
+        <div class="footer-col"><h4>Connect</h4><ul><li><a href="contact.html">Contact Us</a></li><li><a href="mailto:info@arkasa.com">info@arkasa.com</a></li><li><span style="color:var(--text-dim)">Raipur, Chhattisgarh</span></li><li><span style="color:var(--text-dim)">India 492001</span></li></ul></div>
       </div>
     </div>
-    <div class="footer-bottom">© 2025 by ARKASA – Space Architecture Design Research Labs. All rights reserved.</div>
+    <div class="footer-bottom">© 2025 by ARKASA Space Architecture Design Research Labs. All rights reserved.</div>
   </div>
 </footer>
 <script src="script.js"></script>
