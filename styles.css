@@ -123,6 +123,7 @@ a,button,.btn,.nav-link,.hamburger{-webkit-tap-highlight-color:transparent;}
 .moon-3d-wrap{position:relative;display:flex;align-items:center;justify-content:center;width:min(540px,50vw);height:min(540px,50vw);}
 .moon-3d{width:100%;height:100%;object-fit:cover;-webkit-mask-image:radial-gradient(circle, black 55%, transparent 70%);mask-image:radial-gradient(circle, black 55%, transparent 70%);filter:drop-shadow(0 0 40px rgba(168,85,247,.55)) drop-shadow(0 0 80px rgba(34,211,238,.25)) drop-shadow(0 0 120px rgba(168,85,247,.2));}
 .moon-glow{position:absolute;inset:-20%;border-radius:50%;background:radial-gradient(circle, rgba(168,85,247,.1) 0%, rgba(34,211,238,.05) 40%, transparent 65%);animation:moonGlowPulse 4s ease-in-out infinite;pointer-events:none;}
+@keyframes moonFloat{0%,100%{transform:translateY(0px);}50%{transform:translateY(-20px);}}
 @keyframes moonSpin{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
 @keyframes moonGlowPulse{0%,100%{opacity:.7;transform:scale(1);}50%{opacity:1;transform:scale(1.06);}}
 .scroll-line{width:1px;height:56px;background:linear-gradient(to bottom,var(--cyan),transparent);animation:pulse-line 2.2s ease infinite;}
@@ -478,7 +479,7 @@ textarea.f-input{resize:vertical;min-height:135px;}
 .footer{background:#050505;border-top:1px solid rgba(255,255,255,.07);padding:72px 0 max(32px,env(safe-area-inset-bottom));}
 .footer-inner{display:flex;gap:80px;margin-bottom:56px;}
 .footer-brand{flex:1;max-width:260px;}
-.footer-logo{height:46px;object-fit:contain;margin-bottom:16px;}
+.footer-logo{height:46px;object-fit:contain;object-position:left center;margin-bottom:16px;margin-left:-8px;}
 .footer-tagline{font-family:var(--font-a);font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;background:var(--nebula);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.8;}
 .footer-cols{display:flex;gap:60px;flex:1;justify-content:flex-end;}
 .footer-col h4{font-family:var(--font-a);font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan);margin-bottom:18px;}
@@ -702,6 +703,17 @@ body.nav-open{overflow:hidden;}
 
 /* ── Focus visible outline ── */
 :focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:2px;}
+
+/* ── Touch / pointer:coarse devices — disable sticky hover transforms ── */
+@media(hover:none) and (pointer:coarse){
+  .r-card:hover,.p-card:hover,.tm-card:hover,.ev-card:hover,.aff-card:hover,.adv-card:hover{
+    transform:none !important;box-shadow:none !important;border-color:var(--border) !important;
+  }
+  .btn-primary:hover{box-shadow:none !important;transform:none !important;filter:none !important;}
+  .btn-outline:hover{box-shadow:none !important;transform:none !important;}
+  .collab-logo:hover{opacity:.7 !important;transform:none !important;}
+  .award-card:hover,.contrib-card:hover{transform:none !important;box-shadow:none !important;border-color:var(--border) !important;}
+}
 
 /* ── Respect prefers-reduced-motion ── */
 @media(prefers-reduced-motion:reduce){

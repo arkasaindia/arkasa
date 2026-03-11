@@ -163,8 +163,9 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
   });
 });
 
-// 11. 3D CARD TILT — stars glow + perspective tilt on mousemove
+// 11. 3D CARD TILT — stars glow + perspective tilt on mousemove (mouse/pointer devices only)
 (function(){
+  if(window.matchMedia('(hover:none),(pointer:coarse)').matches) return;
   const cards = document.querySelectorAll('.card-tilt');
   cards.forEach(card => {
     card.addEventListener('mousemove', e => {
