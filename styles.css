@@ -342,7 +342,7 @@ a,button,.btn,.nav-link,.hamburger{-webkit-tap-highlight-color:transparent;}
 .collab-logo{display:flex;align-items:center;justify-content:center;opacity:.7;transition:opacity var(--t),transform var(--t);flex:0 0 auto;scroll-snap-align:center;}
 .collab-logo:hover{opacity:1;transform:scale(1.08);}
 .collab-logo img{max-height:80px;max-width:180px;object-fit:contain;filter:grayscale(100%) brightness(1.6);transition:filter var(--t);}
-.collab-logo-syslunar img{max-width:clamp(180px,26vw,320px);max-height:clamp(54px,8vw,96px);}
+.collab-logo-syslunar img{max-width:clamp(200px,30vw,360px);max-height:clamp(60px,9vw,110px);}
 .collab-logo:hover img{filter:grayscale(0%) brightness(1);}
 .aff-name{font-family:var(--font-d);font-size:.82rem;font-weight:700;color:#fff;margin-bottom:10px;letter-spacing:.06em;}
 .aff-role{font-family:var(--font-a);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);}
@@ -622,6 +622,7 @@ textarea.f-input{resize:vertical;min-height:135px;}
 
   /* Collab logos */
   .collab-logo img{max-height:46px;max-width:100px;}
+  .collab-logo-syslunar img{max-height:56px;max-width:130px;}
   .collab-strip{gap:12px;}
 
   /* Team / values */
@@ -680,6 +681,7 @@ textarea.f-input{resize:vertical;min-height:135px;}
 
   /* Collab logos */
   .collab-logo img{max-height:38px;max-width:80px;}
+  .collab-logo-syslunar img{max-height:48px;max-width:110px;}
   .collab-strip{gap:8px;}
   .hero-content{padding:0 16px;}
   .page-hero-content{padding:24px 16px 0;}
