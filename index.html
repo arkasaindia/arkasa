@@ -11,6 +11,17 @@
 </head>
 <body>
 
+<canvas id="bgStarCanvas" aria-hidden="true"></canvas>
+
+<div class="startup-splash" id="startupSplash" aria-hidden="true">
+  <div class="startup-splash-inner">
+    <p class="startup-line" data-splash-line>Reimagining Space</p>
+    <p class="startup-line" data-splash-line>Defining Habitation Systems</p>
+    <p class="startup-line" data-splash-line>Designing Beyond Earth</p>
+  
+  </div>
+</div>
+
 <!-- NAV -->
 <header id="navbar">
   <nav class="nav-container">
@@ -58,35 +69,75 @@
   <div class="container">
     <div class="section-header reveal">
       <span class="section-label">Research Focus</span>
-      <h2 class="section-title">Three Pillars of <span class="grad-text">Inquiry</span></h2>
+      <h2 class="section-title">Four Pillars of <span class="grad-text">Inquiry</span></h2>
       <p class="section-subtitle">Guiding every design decision we make across space and Earth.</p>
     </div>
     <div class="research-cards">
       <div class="r-card reveal" data-delay="0">
-        <span class="r-icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2a10 10 0 0 1 10 10"/><path d="M12 2a10 10 0 0 0-10 10"/><path d="M2 12a10 10 0 0 0 10 10"/><path d="M22 12a10 10 0 0 1-10 10"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="12" y1="2" x2="12" y2="22"/></svg></span>
-        <span class="r-num">01</span>
-        <h3 class="r-title">Space Architecture</h3>
-        <p class="r-body">Our pioneering work in space architecture focuses on designing adaptive and sustainable habitats for lunar, Martian, and orbital environments. Each system is envisioned as a living organism, harmonizing structure, energy, and human experience. By integrating geometry with aerospace engineering, we craft habitats that not only sustain life beyond Earth but also nurture the spirit of exploration within it.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:8px;"><span class="tag">Lunar Habitats</span><span class="tag">Mars Architecture</span><span class="tag">Orbital Systems</span></div>
+        <button class="r-toggle" type="button" aria-expanded="false">
+          <span class="r-icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2a10 10 0 0 1 10 10"/><path d="M12 2a10 10 0 0 0-10 10"/><path d="M2 12a10 10 0 0 0 10 10"/><path d="M22 12a10 10 0 0 1-10 10"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="12" y1="2" x2="12" y2="22"/></svg></span>
+          <span class="r-num">01</span>
+          <h3 class="r-title">Space Architecture</h3>
+          <span class="r-open-label">Open</span>
+        </button>
+        <div class="r-details">
+          <p class="r-body">Our pioneering work in space architecture focuses on designing adaptive and sustainable habitats for lunar, Martian, and orbital environments. Each system is envisioned as a living organism, harmonizing structure, energy, and human experience. By integrating geometry with aerospace engineering, we craft habitats that not only sustain life beyond Earth but also nurture the spirit of exploration within it.</p>
+          <div class="r-tags"><span class="tag">Lunar Habitats</span><span class="tag">Mars Architecture</span><span class="tag">Orbital Systems</span></div>
+        </div>
       </div>
       <div class="r-card reveal" data-delay="150">
-        <span class="r-icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
-        <span class="r-num">02</span>
-        <h3 class="r-title">Meta Aeon</h3>
-        <p class="r-body">Our design philosophy is rooted in cosmic architecture, a discipline that bridges universal geometry, energy resonance, and spatial harmony. We translate ancient wisdom into advanced architectural principles that respond to the physics of outer space. Through this synthesis, Arkasa creates environments that transcend material design, connecting human consciousness with the vast continuum of the cosmos.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:8px;"><span class="tag">Cosmic Geometry</span><span class="tag">Energy Resonance</span><span class="tag">Spatial Harmony</span></div>
+        <button class="r-toggle" type="button" aria-expanded="false">
+          <span class="r-icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+          <span class="r-num">02</span>
+          <h3 class="r-title">Meta Aeon</h3>
+          <span class="r-open-label">Open</span>
+        </button>
+        <div class="r-details">
+          <p class="r-body">Our design philosophy is rooted in cosmic architecture, a discipline that bridges universal geometry, energy resonance, and spatial harmony. We translate ancient wisdom into advanced architectural principles that respond to the physics of outer space. Through this synthesis, Arkasa creates environments that transcend material design, connecting human consciousness with the vast continuum of the cosmos.</p>
+          <div class="r-tags"><span class="tag">Cosmic Geometry</span><span class="tag">Energy Resonance</span><span class="tag">Spatial Harmony</span></div>
+        </div>
       </div>
       <div class="r-card reveal" data-delay="300">
-        <span class="r-icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22c1.25-1.25 2.08-2.92 2-5 0-4 3-7 7-7s7 3 7 7c.08 2.08-.75 3.75-2 5"/><path d="M6 17c0-4 2-6 6-6"/></svg></span>
-        <span class="r-num">03</span>
-        <h3 class="r-title">Bio-Regenerative</h3>
-        <p class="r-body">In our pursuit of bio-regenerative systems, Arkasa develops self-sustaining ecosystems that mirror the balance of nature. These environments recycle air, water, and energy, fostering resilience and long-term habitation in extraterrestrial and Earth-based settings. Guided by a holistic fusion of science and spirituality, our goal is to cultivate life-supporting habitats that evolve symbiotically with their inhabitants and the cosmos itself.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:8px;"><span class="tag">Closed-Loop Systems</span><span class="tag">Life Support</span><span class="tag">Sustainability</span></div>
+        <button class="r-toggle" type="button" aria-expanded="false">
+          <span class="r-icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22c1.25-1.25 2.08-2.92 2-5 0-4 3-7 7-7s7 3 7 7c.08 2.08-.75 3.75-2 5"/><path d="M6 17c0-4 2-6 6-6"/></svg></span>
+          <span class="r-num">03</span>
+          <h3 class="r-title">Bio-Regenerative</h3>
+          <span class="r-open-label">Open</span>
+        </button>
+        <div class="r-details">
+          <p class="r-body">In our pursuit of bio-regenerative systems, Arkasa develops self-sustaining ecosystems that mirror the balance of nature. These environments recycle air, water, and energy, fostering resilience and long-term habitation in extraterrestrial and Earth-based settings. Guided by a holistic fusion of science and spirituality, our goal is to cultivate life-supporting habitats that evolve symbiotically with their inhabitants and the cosmos itself.</p>
+          <div class="r-tags"><span class="tag">Closed-Loop Systems</span><span class="tag">Life Support</span><span class="tag">Sustainability</span></div>
+        </div>
+      </div>
+      <div class="r-card reveal" data-delay="450">
+        <button class="r-toggle" type="button" aria-expanded="false">
+          <span class="r-icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#3ab8e6" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5l3-3 3 3"/><path d="M7.5 13.5V20"/><path d="M12 14l2-4 4-2-2 4-4 2z"/><path d="M10.5 15.5l-3 3"/><circle cx="14" cy="10" r="1"/></svg></span>
+          <span class="r-num">04</span>
+          <h3 class="r-title">Aerospace Engineering</h3>
+          <span class="r-open-label">Open</span>
+        </button>
+        <div class="r-details">
+          <p class="r-body">The Aerospace Engineering Department at Arkasa serves as the technological backbone of our space architecture vision, translating conceptual habitats into high-performance, mission-ready systems. Focused on propulsion integration, structural resilience, life-support engineering, and environmental control, the department ensures that each design operates efficiently within the extreme conditions of space. By bridging advanced aerospace systems with adaptive architectural frameworks, Arkasa&rsquo;s aerospace division enables the realization of intelligent, sustainable habitats for lunar, Martian, and orbital applications.</p>
+          <div class="r-tags"><span class="tag">Adaptive Systems</span><span class="tag">Life Support Engineering</span><span class="tag">Structural Resilience</span></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 <div class="nebula-line"></div>
+
+<div class="research-panel-backdrop" id="researchPanel" aria-hidden="true">
+  <div class="research-panel" role="dialog" aria-modal="true" aria-labelledby="researchPanelTitle">
+    <button class="research-panel-close" type="button" id="researchPanelClose" aria-label="Close research details">&#10005;</button>
+    <div class="research-panel-head">
+      <div class="research-panel-icon" id="researchPanelIcon"></div>
+      <span class="research-panel-num" id="researchPanelNum"></span>
+    </div>
+    <h3 class="research-panel-title" id="researchPanelTitle"></h3>
+    <p class="research-panel-body" id="researchPanelBody"></p>
+    <div class="research-panel-tags" id="researchPanelTags"></div>
+  </div>
+</div>
 
 <!-- RESEARCH METHODOLOGY -->
 <section class="section" style="background:var(--bg);">
@@ -189,12 +240,17 @@
       <h2 class="section-title">Our <span class="grad-text">Global Partners</span></h2>
     </div>
     <div class="collab-strip reveal">
-      <div class="collab-logo"><img src="assets/images/collab-itm.png" alt="ITM University"/></div>
-      <div class="collab-logo"><img src="assets/images/collab-stardust.png" alt="STARDUST"/></div>
-      <div class="collab-logo"><img src="assets/images/collab-habitat-marte.png" alt="Habitat Marte"/></div>
-      <div class="collab-logo"><img src="assets/images/collab-beyond-space.png" alt="Beyond Space"/></div>
-      <div class="collab-logo"><img src="assets/images/FOLDS LOGO for collaboration .png" alt="Folds Design Studio"/></div>
-      <div class="collab-logo collab-logo-syslunar"><img src="assets/images/bnw Full logo.png" alt="Syslunar Technologies Pvt. Ltd."/></div>
+      <div class="collab-row collab-row-top">
+        <div class="collab-logo"><img src="assets/images/collab-itm.png" alt="ITM University"/></div>
+        <div class="collab-logo"><img src="assets/images/collab-stardust.png" alt="STARDUST"/></div>
+        <div class="collab-logo"><img src="assets/images/collab-habitat-marte.png" alt="Habitat Marte"/></div>
+        <div class="collab-logo"><img src="assets/images/collab-beyond-space.png" alt="Beyond Space"/></div>
+      </div>
+      <div class="collab-row collab-row-bottom">
+        <div class="collab-logo"><img src="assets/images/collab-inspired24.png" alt="Inspired 24"/></div>
+        <div class="collab-logo"><img src="assets/images/FOLDS LOGO for collaboration .png" alt="Folds Design Studio"/></div>
+        <div class="collab-logo collab-logo-syslunar"><img src="assets/images/bnw Full logo.png" alt="Syslunar Technologies Pvt. Ltd."/></div>
+      </div>
     </div>
   </div>
 </section>
@@ -229,7 +285,7 @@
           <h4>Connect</h4>
           <ul>
             <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="mailto:info.arkasa.at@gmail.com">info.arkasa.at@gmail.com</a></li>
+            <li><a href="mailto:info@arkasa.in">info@arkasa.in</a></li>
             <li><span style="color:var(--text-dim)">Raipur, Chhattisgarh</span></li>
             <li><span style="color:var(--text-dim)">India 492001</span></li>
           </ul>

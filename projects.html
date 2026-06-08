@@ -101,7 +101,7 @@
       <div class="p-card card-tilt reveal" data-delay="0" onclick="openModal('m1')">
         <div class="p-star-glow"></div>
         <div class="p-gfx">
-          <img src="assets/images/lunar-gateway-habitation.jpg" alt="Lunar Gateway Habitat"/>
+          <img src="assets/images/lunar-gateway-habitation.webp" alt="Lunar Gateway Habitat"/>
           <div class="p-gfx-overlay"></div>
           <span class="p-gfx-badge">Lunar Surface</span>
         </div>
@@ -121,7 +121,7 @@
       <div class="p-card card-tilt reveal" data-delay="0" onclick="openModal('m2')">
         <div class="p-star-glow"></div>
         <div class="p-gfx">
-          <img src="assets/images/voltaris-spire.jpg" alt="Voltaris Spire"/>
+          <img src="assets/images/voltaris-spire.webp" alt="Voltaris Spire"/>
           <div class="p-gfx-overlay"></div>
           <span class="p-gfx-badge">Martian Terrain</span>
         </div>
@@ -161,7 +161,7 @@
       <div class="p-card card-tilt reveal" data-delay="200" onclick="openModal('m4')">
         <div class="p-star-glow"></div>
         <div class="p-gfx">
-          <img src="assets/images/H.O.M.E.jpg" alt="H.O.M.E."/>
+          <img src="assets/images/H.O.M.E.webp" alt="H.O.M.E."/>
           <div class="p-gfx-overlay"></div>
           <span class="p-gfx-badge">ISS Attachment</span>
         </div>
@@ -181,7 +181,7 @@
       <div class="p-card card-tilt reveal" data-delay="300" onclick="openModal('m5')">
         <div class="p-star-glow"></div>
         <div class="p-gfx">
-          <img src="assets/images/chandravaas.jpg" alt="Chandravaas"/>
+          <img src="assets/images/chandravaas.webp" alt="Chandravaas"/>
           <div class="p-gfx-overlay"></div>
           <span class="p-gfx-badge">Lunar Living</span>
         </div>
@@ -201,7 +201,7 @@
       <div class="p-card card-tilt reveal" data-delay="400" onclick="openModal('m6')">
         <div class="p-star-glow"></div>
         <div class="p-gfx">
-          <img src="assets/images/lunome.jpg" alt="Lunome"/>
+          <img src="assets/images/lunome.webp" alt="Lunome"/>
           <div class="p-gfx-overlay"></div>
           <span class="p-gfx-badge">Lunar Analog</span>
         </div>
@@ -226,7 +226,7 @@
   <div class="modal-box modal-tilt">
     <button class="modal-close" onclick="closeModalDirect('m1')">&times;</button>
     <div class="modal-img">
-      <img src="assets/images/lunar-gateway-habitation.jpg" alt="Lunar Gateway Habitat"/>
+      <img src="assets/images/lunar-gateway-habitation.webp" alt="Lunar Gateway Habitat"/>
       <div class="modal-img-overlay"></div>
       <span class="modal-img-badge">Lunar Surface</span>
     </div>
@@ -246,10 +246,35 @@
 <div class="modal-back" id="m2" onclick="closeModal(event,'m2')">
   <div class="modal-box modal-tilt">
     <button class="modal-close" onclick="closeModalDirect('m2')">&times;</button>
-    <div class="modal-img">
-      <img src="assets/images/voltaris-spire.jpg" alt="Voltaris Spire"/>
+    <div class="modal-img modal-gallery">
+      <div class="modal-gallery-track" aria-label="Voltaris Spire image gallery">
+        <figure class="modal-slide">
+          <img src="assets/images/voltaris-spire.webp" alt="Voltaris Spire view 1"/>
+        </figure>
+        <figure class="modal-slide">
+          <img src="assets/images/vol1.webp" alt="Voltaris Spire view 2"/>
+        </figure>
+        <figure class="modal-slide">
+          <img src="assets/images/vol2.webp" alt="Voltaris Spire view 3"/>
+        </figure>
+        <figure class="modal-slide">
+          <img src="assets/images/vol3.webp" alt="Voltaris Spire view 4"/>
+        </figure>
+        <figure class="modal-slide">
+          <img src="assets/images/vol4.webp" alt="Voltaris Spire view 5"/>
+        </figure>
+      </div>
+      <button class="modal-gallery-arrow modal-gallery-prev" type="button" aria-label="Previous image">&#10094;</button>
+      <button class="modal-gallery-arrow modal-gallery-next" type="button" aria-label="Next image">&#10095;</button>
+      <div class="modal-gallery-dots" role="tablist" aria-label="Voltaris Spire gallery slide navigation">
+        <button class="modal-gallery-dot is-active" type="button" aria-label="Go to image 1" aria-current="true"></button>
+        <button class="modal-gallery-dot" type="button" aria-label="Go to image 2" aria-current="false"></button>
+        <button class="modal-gallery-dot" type="button" aria-label="Go to image 3" aria-current="false"></button>
+        <button class="modal-gallery-dot" type="button" aria-label="Go to image 4" aria-current="false"></button>
+        <button class="modal-gallery-dot" type="button" aria-label="Go to image 5" aria-current="false"></button>
+      </div>
       <div class="modal-img-overlay"></div>
-      <span class="modal-img-badge">Martian Terrain</span>
+      <span class="modal-img-badge">Martian Terrain • Swipe / Scroll</span>
     </div>
     <div class="modal-content">
       <span class="modal-lbl">Project 002, Martian Terrain</span>
@@ -267,10 +292,35 @@
 <div class="modal-back" id="m3" onclick="closeModal(event,'m3')">
   <div class="modal-box modal-tilt">
     <button class="modal-close" onclick="closeModalDirect('m3')">&times;</button>
-    <div class="modal-img">
-      <img src="assets/images/wardencliffe-aeon.jpg" alt="Wardencliffe Aeon"/>
+    <div class="modal-img modal-gallery">
+      <div class="modal-gallery-track" aria-label="Wardencliffe Aeon image gallery">
+        <figure class="modal-slide">
+          <img src="assets/images/wardencliffe-aeon.jpg" alt="Wardencliffe Aeon view 1"/>
+        </figure>
+        <figure class="modal-slide">
+          <img src="assets/images/warden1.webp" alt="Wardencliffe Aeon view 2"/>
+        </figure>
+        <figure class="modal-slide">
+          <img src="assets/images/warden2.webp" alt="Wardencliffe Aeon view 3"/>
+        </figure>
+        <figure class="modal-slide">
+          <img src="assets/images/warden3.webp" alt="Wardencliffe Aeon view 4"/>
+        </figure>
+        <figure class="modal-slide">
+          <img src="assets/images/warden4.webp" alt="Wardencliffe Aeon view 5"/>
+        </figure>
+      </div>
+      <button class="modal-gallery-arrow modal-gallery-prev" type="button" aria-label="Previous image">&#10094;</button>
+      <button class="modal-gallery-arrow modal-gallery-next" type="button" aria-label="Next image">&#10095;</button>
+      <div class="modal-gallery-dots" role="tablist" aria-label="Wardencliffe Aeon gallery slide navigation">
+        <button class="modal-gallery-dot is-active" type="button" aria-label="Go to image 1" aria-current="true"></button>
+        <button class="modal-gallery-dot" type="button" aria-label="Go to image 2" aria-current="false"></button>
+        <button class="modal-gallery-dot" type="button" aria-label="Go to image 3" aria-current="false"></button>
+        <button class="modal-gallery-dot" type="button" aria-label="Go to image 4" aria-current="false"></button>
+        <button class="modal-gallery-dot" type="button" aria-label="Go to image 5" aria-current="false"></button>
+      </div>
       <div class="modal-img-overlay"></div>
-      <span class="modal-img-badge">Meta Aeon</span>
+      <span class="modal-img-badge">Meta Aeon • Swipe / Scroll</span>
     </div>
     <div class="modal-content">
       <span class="modal-lbl">Project 003, Meta Aeon</span>
@@ -288,10 +338,31 @@
 <div class="modal-back" id="m4" onclick="closeModal(event,'m4')">
   <div class="modal-box modal-tilt">
     <button class="modal-close" onclick="closeModalDirect('m4')">&times;</button>
-    <div class="modal-img">
-      <img src="assets/images/H.O.M.E.jpg" alt="H.O.M.E."/>
+    <div class="modal-img modal-gallery">
+      <div class="modal-gallery-track" aria-label="H.O.M.E image gallery">
+        <figure class="modal-slide">
+          <img src="assets/images/H.O.M.E.webp" alt="H.O.M.E station view 1"/>
+        </figure>
+        <figure class="modal-slide">
+          <img src="assets/images/home1.webp" alt="H.O.M.E station view 2"/>
+        </figure>
+        <figure class="modal-slide">
+          <img src="assets/images/home2.webp" alt="H.O.M.E station view 3"/>
+        </figure>
+        <figure class="modal-slide">
+          <img src="assets/images/home4.webp" alt="H.O.M.E station view 4"/>
+        </figure>
+      </div>
+      <button class="modal-gallery-arrow modal-gallery-prev" type="button" aria-label="Previous image">&#10094;</button>
+      <button class="modal-gallery-arrow modal-gallery-next" type="button" aria-label="Next image">&#10095;</button>
+      <div class="modal-gallery-dots" role="tablist" aria-label="H.O.M.E gallery slide navigation">
+        <button class="modal-gallery-dot is-active" type="button" aria-label="Go to image 1" aria-current="true"></button>
+        <button class="modal-gallery-dot" type="button" aria-label="Go to image 2" aria-current="false"></button>
+        <button class="modal-gallery-dot" type="button" aria-label="Go to image 3" aria-current="false"></button>
+        <button class="modal-gallery-dot" type="button" aria-label="Go to image 4" aria-current="false"></button>
+      </div>
       <div class="modal-img-overlay"></div>
-      <span class="modal-img-badge">ISS Attachment</span>
+      <span class="modal-img-badge">ISS Attachment • Swipe / Scroll</span>
     </div>
     <div class="modal-content">
       <span class="modal-lbl">Project 004, ISS Attachment</span>
@@ -309,10 +380,35 @@
 <div class="modal-back" id="m5" onclick="closeModal(event,'m5')">
   <div class="modal-box modal-tilt">
     <button class="modal-close" onclick="closeModalDirect('m5')">&times;</button>
-    <div class="modal-img">
-      <img src="assets/images/chandravaas.jpg" alt="Chandravaas"/>
+    <div class="modal-img modal-gallery">
+      <div class="modal-gallery-track" aria-label="Chandravaas image gallery">
+        <figure class="modal-slide">
+          <img src="assets/images/chandravaas.webp" alt="Chandravaas habitat view 1"/>
+        </figure>
+        <figure class="modal-slide">
+          <img src="assets/images/chandra2.webp" alt="Chandravaas habitat view 2"/>
+        </figure>
+        <figure class="modal-slide">
+          <img src="assets/images/chandra3.webp" alt="Chandravaas habitat view 3"/>
+        </figure>
+        <figure class="modal-slide">
+          <img src="assets/images/chandra4.webp" alt="Chandravaas habitat view 4"/>
+        </figure>
+        <figure class="modal-slide">
+          <img src="assets/images/chandra5.webp" alt="Chandravaas habitat view 5"/>
+        </figure>
+      </div>
+      <button class="modal-gallery-arrow modal-gallery-prev" type="button" aria-label="Previous image">&#10094;</button>
+      <button class="modal-gallery-arrow modal-gallery-next" type="button" aria-label="Next image">&#10095;</button>
+      <div class="modal-gallery-dots" role="tablist" aria-label="Chandravaas gallery slide navigation">
+        <button class="modal-gallery-dot is-active" type="button" aria-label="Go to image 1" aria-current="true"></button>
+        <button class="modal-gallery-dot" type="button" aria-label="Go to image 2" aria-current="false"></button>
+        <button class="modal-gallery-dot" type="button" aria-label="Go to image 3" aria-current="false"></button>
+        <button class="modal-gallery-dot" type="button" aria-label="Go to image 4" aria-current="false"></button>
+        <button class="modal-gallery-dot" type="button" aria-label="Go to image 5" aria-current="false"></button>
+      </div>
       <div class="modal-img-overlay"></div>
-      <span class="modal-img-badge">Lunar Living</span>
+      <span class="modal-img-badge">Lunar Living • Swipe / Scroll</span>
     </div>
     <div class="modal-content">
       <span class="modal-lbl">Project 005, Lunar Living</span>
@@ -330,10 +426,27 @@
 <div class="modal-back" id="m6" onclick="closeModal(event,'m6')">
   <div class="modal-box modal-tilt">
     <button class="modal-close" onclick="closeModalDirect('m6')">&times;</button>
-    <div class="modal-img">
-      <img src="assets/images/lunome.jpg" alt="Lunome"/>
+    <div class="modal-img modal-gallery">
+      <div class="modal-gallery-track" aria-label="Lunome image gallery">
+        <figure class="modal-slide">
+          <img src="assets/images/lunome.webp" alt="Lunome habitat view 1"/>
+        </figure>
+        <figure class="modal-slide">
+          <img src="assets/images/lunome1.webp" alt="Lunome habitat view 2"/>
+        </figure>
+        <figure class="modal-slide">
+          <img src="assets/images/lunome3.webp" alt="Lunome habitat view 3"/>
+        </figure>
+      </div>
+      <button class="modal-gallery-arrow modal-gallery-prev" type="button" aria-label="Previous image">&#10094;</button>
+      <button class="modal-gallery-arrow modal-gallery-next" type="button" aria-label="Next image">&#10095;</button>
+      <div class="modal-gallery-dots" role="tablist" aria-label="Lunome gallery slide navigation">
+        <button class="modal-gallery-dot is-active" type="button" aria-label="Go to image 1" aria-current="true"></button>
+        <button class="modal-gallery-dot" type="button" aria-label="Go to image 2" aria-current="false"></button>
+        <button class="modal-gallery-dot" type="button" aria-label="Go to image 3" aria-current="false"></button>
+      </div>
       <div class="modal-img-overlay"></div>
-      <span class="modal-img-badge">Lunar Analog</span>
+      <span class="modal-img-badge">Lunar Analog • Swipe / Scroll</span>
     </div>
     <div class="modal-content">
       <span class="modal-lbl">Project 006, Lunar Analog</span>
@@ -355,7 +468,7 @@
       <div class="footer-cols">
         <div class="footer-col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="research.html">Research</a></li><li><a href="projects.html">Projects</a></li></ul></div>
         <div class="footer-col"><h4>Explore</h4><ul><li><a href="team.html">Team</a></li><li><a href="events.html">Events</a></li></ul></div>
-        <div class="footer-col"><h4>Connect</h4><ul><li><a href="contact.html">Contact Us</a></li><li><a href="mailto:info.arkasa.at@gmail.com">info.arkasa.at@gmail.com</a></li><li><span style="color:var(--text-dim)">Raipur, Chhattisgarh</span></li><li><span style="color:var(--text-dim)">India 492001</span></li></ul></div>
+        <div class="footer-col"><h4>Connect</h4><ul><li><a href="contact.html">Contact Us</a></li><li><a href="mailto:info@arkasa.in">info@arkasa.in</a></li><li><span style="color:var(--text-dim)">Raipur, Chhattisgarh</span></li><li><span style="color:var(--text-dim)">India 492001</span></li></ul></div>
       </div>
     </div>
     <div class="footer-bottom"> 2025 by ARKASA Space Architecture Design Research Labs. All rights reserved.</div>

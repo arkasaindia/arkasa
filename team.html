@@ -46,32 +46,38 @@
     <div class="team-grid">
 
       <div class="tm-card reveal" data-delay="0">
-        <div class="tm-photo-wrap">
+        <button class="tm-photo-wrap tm-photo-trigger" type="button" aria-haspopup="dialog" aria-controls="teamBioModal" aria-label="Open Arshleen Kaur Sahni bio">
           <img src="assets/images/team-arshleen.jpg" alt="Arshleen Kaur Sahni" class="tm-photo"/>
-        </div>
+          <span class="tm-photo-badge">View Bio</span>
+        </button>
         <div class="tm-info">
-          <h3 class="tm-name">Arshleen Kaur Sahni</h3>
-          <p class="tm-role">Founder &amp; CEO</p>
+          <h3 class="tm-name">Arshleen Kaur Sahni &ldquo;Arsh&rdquo;</h3>
+          <p class="tm-role">Founder | CEO | Space Architect</p>
+          <p class="tm-intro">Arshleen Kaur is a renowned space architect, researcher, analog astronaut, and TEDx speaker with global recognition. Her expertise lies in designing lunar and Martian habitation systems, pushing the boundaries of extraterrestrial architecture. With a passion for cymatics and architectural design, she continually explores how these elements influence human well-being in space habitats. She also focuses on developing sustainable and resilient habitat systems that support long-duration space missions. As an advocate for space architecture, she frequently shares her knowledge at esteemed institutions, inspiring the next generation of innovators in the field.</p>
         </div>
       </div>
 
       <div class="tm-card reveal" data-delay="100">
-        <div class="tm-photo-wrap">
+        <button class="tm-photo-wrap tm-photo-trigger" type="button" aria-haspopup="dialog" aria-controls="teamBioModal" aria-label="Open Biswajit Das bio">
           <img src="assets/images/team-biswajit.jpg" alt="Biswajit Das" class="tm-photo"/>
-        </div>
+          <span class="tm-photo-badge">View Bio</span>
+        </button>
         <div class="tm-info">
-          <h3 class="tm-name">Biswajit Das</h3>
-          <p class="tm-role">Co-founder &amp; COO</p>
+          <h3 class="tm-name">Biswajit Das &ldquo;Waz&rdquo;</h3>
+          <p class="tm-role">Co-Founder | COO | Space Architect | Researcher</p>
+          <p class="tm-intro">Biswajit Das is a space architect, researcher, designer, and multidisciplinary artist dedicated to advancing human space exploration through sustainable design and habitat systems. His work integrates science, art, and ancient wisdom to explore regenerative habitats, closed-loop systems, and cosmic architecture for enhancing human well-being in extreme and extraterrestrial environments. Through research, workshops, and global engagements, he actively promotes a multidisciplinary vision of space exploration, inspiring future generations to design environments beyond Earth that support harmony, resilience, and human flourishing.</p>
         </div>
       </div>
 
       <div class="tm-card reveal" data-delay="200">
-        <div class="tm-photo-wrap">
+        <button class="tm-photo-wrap tm-photo-trigger" type="button" aria-haspopup="dialog" aria-controls="teamBioModal" aria-label="Open Aagam Jain bio">
           <img src="assets/images/team-aagam.png" alt="Aagam Jain" class="tm-photo"/>
-        </div>
+          <span class="tm-photo-badge">View Bio</span>
+        </button>
         <div class="tm-info">
-          <h3 class="tm-name">Aagam Jain</h3>
-          <p class="tm-role">Lead Aerospace &amp; Systems Engineer</p>
+          <h3 class="tm-name">Aagam Jain &ldquo;Trackstar&rdquo;</h3>
+          <p class="tm-role">Lead Aerospace &amp; Systems Engineer | Analog Astronaut</p>
+          <p class="tm-intro">Aagam Jain is an aerospace engineer, researcher at Arkasa, and an analog astronaut with a mission to shape the future of space exploration. As the youngest and first Indian to complete the prestigious EMMIHS lunar simulation mission at HI-SEAS, Hawaii, home to NASA&rsquo;s long-duration Mars simulations, he has gained rare hands-on experience in EVA operations, habitat systems, and isolation mission protocols. His research journey includes contributions at ISRO&rsquo;s Space Applications Centre (SAC) and Vikram Sarabhai Space Centre (VSSC), where he worked on innovative aerospace solutions. Representing Bharat on the world stage, Aagam blends technical expertise, field simulation experience, and an unshakable vision for advancing interplanetary civilization.</p>
         </div>
       </div>
 
@@ -79,6 +85,25 @@
   </div>
 </section>
 <div class="nebula-line"></div>
+
+<div class="modal-back" id="teamBioModal" onclick="closeModal(event,'teamBioModal')" aria-hidden="true">
+  <div class="modal-box modal-tilt team-modal-box" role="dialog" aria-modal="true" aria-labelledby="teamBioTitle">
+    <button class="modal-close" type="button" onclick="closeModalDirect('teamBioModal')" aria-label="Close team bio">&times;</button>
+    <div class="modal-img team-modal-photo">
+      <img id="teamBioImage" src="" alt=""/>
+      <div class="modal-img-overlay"></div>
+      <span class="modal-img-badge" id="teamBioBadge">Team Profile</span>
+    </div>
+    <div class="modal-content">
+      <span class="modal-lbl" id="teamBioLabel">Team Member</span>
+      <h2 class="modal-title" id="teamBioTitle"></h2>
+      <div class="modal-body">
+        <p id="teamBioRole"></p>
+        <p id="teamBioText"></p>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- ADVISORY COMMITTEE -->
 <section class="section" style="background:var(--bg-2);">
@@ -92,79 +117,141 @@
     <div class="advisor-grid">
 
       <div class="adv-card reveal" data-delay="0">
-        <div class="adv-header">
-          <img src="assets/images/adv-mohana.png" alt="Mohana Sai Akula" class="adv-avatar"/>
-          <div>
-            <h3 class="adv-name">Mohana Sai Akula</h3>
-            <span class="adv-title">Space Biotech and Biomedical Expert</span>
-          </div>
+        <button class="adv-photo-wrap adv-photo-trigger" type="button" aria-label="Open Mohan Sai Akula (Amar) bio">
+          <img src="assets/images/adv-mohana.png" alt="Mohan Sai Akula (Amar)" class="adv-photo"/>
+          <span class="adv-photo-badge">View Bio</span>
+        </button>
+        <div class="adv-info">
+          <h3 class="adv-name">Mohan Sai Akula (Amar)</h3>
+          <span class="adv-title">Space Biotech and Biomedical Expert</span>
         </div>
-        <p class="adv-pos">Research Scientist-I (Non-Medical), Centre for Advanced Research, Institute of Aerospace Medicine, IAF, Bengaluru, India</p>
-        <p class="adv-bio">Mohana Sai Akula is an Indian space science researcher and astronaut candidate selected by Titans Space Industries, USA, for their 2029 inaugural spaceflight mission. He is India's first civilian scientist to participate in the government space analog mission Anugami-2025. A Master's scholar in Astrobiology and Space Science, his work focuses on astrobiology mission design, lunar botany, and space agriculture. He is an ISRO NSSS 2024 awardee, an Indian Ambassador for LunAres Research Station, Poland, and has represented India in two international lunar analog missions (2023 &amp; 2024).</p>
+        <p class="adv-bio">Mohan Sai Akula (Amar) is an Indian space science researcher and astronaut candidate selected by Titans Space Industries, USA, for their 2029 inaugural spaceflight mission. He is India's first civilian scientist to participate in the government space analog mission Anugami-2025. A Master's scholar in Astrobiology and Space Science, his work focuses on astrobiology mission design, lunar botany, and space agriculture. He is an ISRO NSSS 2024 awardee, an Indian Ambassador for LunAres Research Station, Poland, and has represented India in two international lunar analog missions (2023 &amp; 2024).</p>
       </div>
 
       <div class="adv-card reveal" data-delay="100">
-        <div class="adv-header">
-          <img src="assets/images/adv-ananda.png" alt="Ananda Padmanabhan" class="adv-avatar"/>
-          <div>
-            <h3 class="adv-name">Ananda Padmanabhan</h3>
-            <span class="adv-title">Space Biotechnologist &amp; Researcher</span>
-          </div>
+        <button class="adv-photo-wrap adv-photo-trigger" type="button" aria-label="Open Ananda Padmanabhan bio">
+          <img src="assets/images/adv-ananda.png" alt="Ananda Padmanabhan" class="adv-photo"/>
+          <span class="adv-photo-badge">View Bio</span>
+        </button>
+        <div class="adv-info">
+          <h3 class="adv-name">Ananda Padmanabhan</h3>
+          <span class="adv-title">Space Biotechnologist &amp; Researcher</span>
         </div>
-        <p class="adv-pos">Space Biotechnologist | Researcher</p>
         <p class="adv-bio">Ananda Padmanabhan is a space biotechnology researcher and advocate for space life sciences from India. He is currently pursuing his Master's at Julius-Maximilians-Universit&#228;t W&#252;rzburg, Germany. He works with Arkasa Space Architecture Labs as a space biotechnology researcher and serves as a habitat coordinator in one of the world's largest analog research environments. His work focuses on regenerative space habitats, astrobiology, and life-support systems for future space missions.</p>
       </div>
 
       <div class="adv-card reveal" data-delay="200">
-        <div class="adv-header">
-          <img src="assets/images/adv-kristine.png" alt="Kristine Atienza" class="adv-avatar"/>
-          <div>
-            <h3 class="adv-name">Kristine Atienza</h3>
-            <span class="adv-title">Founder | Space Nutritionist | Analog Astronaut</span>
-          </div>
+        <button class="adv-photo-wrap adv-photo-trigger" type="button" aria-label="Open Kristine Atienza bio">
+          <img src="assets/images/adv-kristine.png" alt="Kristine Atienza" class="adv-photo"/>
+          <span class="adv-photo-badge">View Bio</span>
+        </button>
+        <div class="adv-info">
+          <h3 class="adv-name">Kristine Atienza</h3>
+          <span class="adv-title">Founder | Space Nutritionist | Analog Astronaut</span>
         </div>
-        <p class="adv-pos">Founder, Space Nutrition Network</p>
         <p class="adv-bio">Kristine Atienza is a public health nutritionist, innovator, and founder of the Space Nutrition Network. With over eight years of experience in food systems and public health programs, she has worked on national and international initiatives related to nutrition and food security. She is recognized as the first Filipino analog astronaut and is actively advancing research on space food systems and astronaut nutrition for long-duration missions.</p>
       </div>
 
       <div class="adv-card reveal" data-delay="300">
-        <div class="adv-header">
-          <img src="assets/images/adv-ismail.png" alt="Ismail El Omari" class="adv-avatar"/>
-          <div>
-            <h3 class="adv-name">Ismail El Omari</h3>
-            <span class="adv-title">Analog Astronaut | Space Architect</span>
-          </div>
+        <button class="adv-photo-wrap adv-photo-trigger" type="button" aria-label="Open Ismail El Omari bio">
+          <img src="assets/images/adv-ismail.png" alt="Ismail El Omari" class="adv-photo"/>
+          <span class="adv-photo-badge">View Bio</span>
+        </button>
+        <div class="adv-info">
+          <h3 class="adv-name">Ismail El Omari</h3>
+          <span class="adv-title">Analog Astronaut | Space Architect</span>
         </div>
-        <p class="adv-pos">Analog Astronaut | Space Architect</p>
         <p class="adv-bio">Ismail El Omari is a Moroccan analog astronaut, space architect, and advocate for human space exploration. He has participated in Mars analog missions, conducting research and operational tasks in isolated environments that simulate extraterrestrial conditions. With a background in architecture and space habitats, he works to promote innovation in space design and inspires the next generation through educational initiatives such as AstroKids.</p>
       </div>
 
       <div class="adv-card reveal" data-delay="400">
-        <div class="adv-header">
-          <img src="assets/images/adv-jason.png" alt="Jason Michaud" class="adv-avatar"/>
-          <div>
-            <h3 class="adv-name">Jason Michaud</h3>
-            <span class="adv-title">Founder &amp; CEO, Stardust Inc. | Astronaut Candidate</span>
-          </div>
+        <button class="adv-photo-wrap adv-photo-trigger" type="button" aria-label="Open Jason Michaud bio">
+          <img src="assets/images/adv-jason.png" alt="Jason Michaud" class="adv-photo"/>
+          <span class="adv-photo-badge">View Bio</span>
+        </button>
+        <div class="adv-info">
+          <h3 class="adv-name">Jason Michaud</h3>
+          <span class="adv-title">Founder &amp; CEO, Stardust Inc. | Astronaut Candidate</span>
         </div>
-        <p class="adv-pos">Founder &amp; CEO, Stardust Inc.</p>
         <p class="adv-bio">Jason Michaud is the founder and CEO of Stardust Inc., an organization dedicated to making space accessible to people around the world. With extensive experience in microgravity, lunar, and Martian flight simulations, he is actively training to become a private astronaut. Through Stardust Odyssey, he leads global collaborations with space agencies, industry leaders, and international organizations to support workforce development, analog missions, and the future of human space exploration.</p>
       </div>
 
       <div class="adv-card reveal" data-delay="500">
-        <div class="adv-header">
-          <img src="assets/images/Ar. Krishna Murthy .png" alt="Ar. Krishna Murthy" class="adv-avatar"/>
-          <div>
-            <h3 class="adv-name">Ar. Krishna Murthy</h3>
-            <span class="adv-title">Principal Architect | Folds Design Studio</span>
-          </div>
+        <button class="adv-photo-wrap adv-photo-trigger" type="button" aria-label="Open Ar. Krishna Murthy bio">
+          <img src="assets/images/Ar. Krishna Murthy .png" alt="Ar. Krishna Murthy" class="adv-photo"/>
+          <span class="adv-photo-badge">View Bio</span>
+        </button>
+        <div class="adv-info">
+          <h3 class="adv-name">Ar. Krishna Murthy</h3>
+          <span class="adv-title">Principal Architect | Folds Design Studio</span>
         </div>
-        <p class="adv-pos">Principal Architect | Folds Design Studio</p>
         <p class="adv-bio">Krishna Murthy is an Indian architect and the founder of Folds Design Studio, an innovative architectural practice based in Navi Mumbai. His work focuses on integrating advanced digital technologies such as AI, parametric design, and digital fabrication to create future-forward built environments. Alongside his professional practice, he is a sought-after educator and speaker who conducts workshops across India on parametric design and computational architecture. Through his work and mentorship, he continues to inspire the next generation of architects while shaping a technologically driven future for the built environment.</p>
       </div>
 
     </div>
 
+  </div>
+</section>
+<div class="nebula-line"></div>
+
+<!-- OUR CREW -->
+<section class="section" style="background:var(--bg-2);">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="section-title">OUR <span class="grad-text">CREW</span></h2>
+    </div>
+
+    <div class="crew-grid">
+      <div class="crew-card reveal" data-delay="0">
+        <div class="crew-photo-wrap">
+          <img src="assets/images/ASTHA RAWAT.png" alt="Astha Rawat" class="crew-photo"/>
+        </div>
+        <h3 class="crew-name">ASTHA RAWAT</h3>
+        <p class="crew-role">Space Bio-Tech Researcher</p>
+      </div>
+      <div class="crew-card reveal" data-delay="60">
+        <div class="crew-photo-wrap">
+          <img src="assets/images/LUMESH SAHU %E2%80%9CLumi%E2%80%9D.png" alt="Lumesh Sahu" class="crew-photo"/>
+        </div>
+        <h3 class="crew-name">LUMESH SAHU</h3>
+        <p class="crew-role">Space Bio-Tech Researcher</p>
+      </div>
+      <div class="crew-card reveal" data-delay="120">
+        <div class="crew-photo-wrap">
+          <img src="assets/images/SARVESH ARJUNAN RAMESH.webp" alt="Sarvesh Arjunan Ramesh" class="crew-photo"/>
+        </div>
+        <h3 class="crew-name">SARVESH ARJUNAN RAMESH</h3>
+        <p class="crew-role">Space Architect &amp; 3D Visualizer</p>
+      </div>
+      <div class="crew-card reveal" data-delay="180">
+        <div class="crew-photo-wrap">
+          <img src="assets/images/BANI KAPOOR.png" alt="Bani Kapoor" class="crew-photo"/>
+        </div>
+        <h3 class="crew-name">BANI KAPOOR</h3>
+        <p class="crew-role">Space Architect &amp; Content writer</p>
+      </div>
+      <div class="crew-card reveal" data-delay="240">
+        <div class="crew-photo-wrap">
+          <img src="assets/images/AISWARYA MOHANAN.webp" alt="Aiswarya Mohanan" class="crew-photo"/>
+        </div>
+        <h3 class="crew-name">AISWARYA MOHANAN</h3>
+        <p class="crew-role">Space Bio-Tech Researcher</p>
+      </div>
+      <div class="crew-card reveal" data-delay="300">
+        <div class="crew-photo-wrap">
+          <img src="assets/images/AMIT KUMAR PAL.webp" alt="Amit Kumar Pal" class="crew-photo"/>
+        </div>
+        <h3 class="crew-name">AMIT KUMAR PAL</h3>
+        <p class="crew-role">Space Interior Designer</p>
+      </div>
+      <div class="crew-card reveal" data-delay="360">
+        <div class="crew-photo-wrap">
+          <img src="assets/images/ISHTIKA CHAUHAN.webp" alt="Ishtika Chauhan" class="crew-photo"/>
+        </div>
+        <h3 class="crew-name">ISHTIKA CHAUHAN</h3>
+        <p class="crew-role">Space Bio-Tech Researcher</p>
+      </div>
+    </div>
   </div>
 </section>
 <div class="nebula-line"></div>
@@ -176,7 +263,7 @@
       <div class="footer-cols">
         <div class="footer-col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="projects.html">Projects</a></li></ul></div>
         <div class="footer-col"><h4>Explore</h4><ul><li><a href="team.html">Team</a></li><li><a href="achievements.html">Achievements</a></li><li><a href="events.html">Events</a></li></ul></div>
-        <div class="footer-col"><h4>Connect</h4><ul><li><a href="contact.html">Contact Us</a></li><li><a href="careers.html">Careers</a></li><li><a href="mailto:info.arkasa.at@gmail.com">info.arkasa.at@gmail.com</a></li><li><span style="color:var(--text-dim)">Raipur, Chhattisgarh</span></li><li><span style="color:var(--text-dim)">India 492001</span></li></ul></div>
+        <div class="footer-col"><h4>Connect</h4><ul><li><a href="contact.html">Contact Us</a></li><li><a href="careers.html">Careers</a></li><li><a href="mailto:info@arkasa.in">info@arkasa.in</a></li><li><span style="color:var(--text-dim)">Raipur, Chhattisgarh</span></li><li><span style="color:var(--text-dim)">India 492001</span></li></ul></div>
       </div>
     </div>
     <div class="footer-bottom">&#169; 2025 by ARKASA Space Architecture Design Research Labs. All rights reserved.</div>

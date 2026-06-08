@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Achievements – ARKASA</title>
+  <title>Achievements - ARKASA</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet"/>
@@ -18,15 +18,28 @@
     /* -- AWARDS -- */
     .awards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:28px;margin-top:16px;}
     .award-card{background:var(--bg-card);border:1px solid var(--border);border-radius:6px;padding:40px 36px;display:flex;flex-direction:column;gap:14px;transition:transform .3s,border-color .3s,box-shadow .3s;position:relative;overflow:hidden;}
+    .awards-grid .award-card:last-child{grid-column:1 / -1;max-width:420px;width:100%;justify-self:center;}
     .award-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan),var(--violet));}
     .award-card:hover{transform:translateY(-6px);border-color:rgba(34,211,238,.35);box-shadow:0 24px 60px rgba(34,211,238,.1);}
-    .award-img-wrap{margin:-40px -36px 28px;overflow:hidden;border-radius:4px 4px 0 0;}
-    .award-img-wrap img{width:100%;height:280px;object-fit:cover;object-position:top;display:block;}
+    .award-img-wrap{margin:-40px -36px 28px;overflow:hidden;border-radius:4px 4px 0 0;aspect-ratio:16/10;background:var(--bg-2);}
+    .award-img-wrap img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;}
+    .award-img-wrap-portrait{background:linear-gradient(160deg,#0c0c0c 0%,#12131b 100%);}
+    .award-img-wrap-portrait img{height:100%;object-fit:cover;object-position:center 30%;padding:0;}
+    .award-card-podcast .award-img-wrap{
+      aspect-ratio:5/5.4;
+      width:78%;
+      margin:-24px auto 24px;
+      border-radius:6px;
+    }
+    .award-img-wrap-portrait img.award-img-podcast{object-fit:cover;object-position:center 56%;transform:none;background:#06070a;}
     .award-tag{display:inline-block;padding:3px 12px;border-radius:20px;font-family:'Rajdhani',sans-serif;font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;background:rgba(34,211,238,.1);color:var(--cyan);border:1px solid rgba(34,211,238,.25);width:fit-content;}
     .award-tag.violet{background:rgba(168,85,247,.1);color:var(--violet);border-color:rgba(168,85,247,.25);}
     .award-title{font-family:'Orbitron',sans-serif;font-size:1rem;font-weight:700;color:#fff;line-height:1.4;}
     .award-who{font-family:'Rajdhani',sans-serif;font-size:.9rem;font-weight:600;color:var(--cyan);letter-spacing:.05em;}
     .award-desc{color:var(--text-muted);font-size:.9rem;line-height:1.75;}
+    .award-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px;}
+    .award-link{display:inline-flex;align-items:center;justify-content:center;padding:8px 12px;border-radius:3px;border:1px solid rgba(34,211,238,.28);background:rgba(34,211,238,.08);color:var(--cyan);font-family:'Rajdhani',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;transition:background .25s,border-color .25s,color .25s;}
+    .award-link:hover{background:linear-gradient(135deg,rgba(34,211,238,.2),rgba(168,85,247,.2));border-color:rgba(168,85,247,.35);color:#fff;}
 
     /* -- CONTRIBUTIONS GRID -- */
     .contrib-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-top:16px;}
@@ -43,6 +56,7 @@
       .stat-item{padding:28px 24px;}.stat-num{font-size:1.8rem;}
       .awards-grid{grid-template-columns:1fr;}
       .contrib-grid{grid-template-columns:1fr;}
+      .award-card-podcast .award-img-wrap{width:86%;margin:-20px auto 20px;}
     }
     @media(max-width:480px){
       .stat-item{padding:20px 16px;flex:0 0 calc(50% - 1px);border-bottom:1px solid var(--border);}.stat-num{font-size:1.5rem;}
@@ -119,24 +133,30 @@
     </div>
     <div class="awards-grid">
 
-      <div class="award-card reveal" data-delay="0">
-        <div class="award-img-wrap"><img src="assets/images/Indian Achievers Forum Award.png" alt="Young Achievers Award"/></div>
-        <span class="award-tag">Individual Award</span>
-        <div class="award-title">Indian Achievers Forum Award</div>
-        <div class="award-who">Arshleen Kaur Sahni</div>
-        <p class="award-desc">Arshleen's groundbreaking contributions to the field earned her the prestigious Indian Achievers Forum Award, a testament to her dedication, ingenuity, and impact on the space technology landscape.</p>
-      </div>
-
       <div class="award-card reveal" data-delay="100">
         <div class="award-img-wrap"><img src="assets/images/ach-tedx-talk.png" alt="TEDx Flame University"/></div>
         <span class="award-tag">Speaking Honour</span>
         <div class="award-title">TEDx Talks Flames, "From Dreaming of Space to Crafting It"</div>
         <div class="award-who">Arshleen Kaur Sahni</div>
         <p class="award-desc">Invited speaker at TEDx Flames University, Pune, delivering a talk on the intersection of space architecture, imagination, and engineering reality.</p>
+        <div class="award-links">
+          <a class="award-link" href="https://youtu.be/26AGDaS9iHU?si=ZacQVqfB4S3ziCUI" target="_blank" rel="noopener noreferrer">Watch TEDx Talk</a>
+        </div>
+      </div>
+
+      <div class="award-card award-card-podcast reveal" data-delay="0">
+        <div class="award-img-wrap award-img-wrap-portrait"><img class="award-img-podcast" src="assets/images/podcast.jpg" alt="Panjabi Pod Podcast Feature"/></div>
+        <span class="award-tag violet">Podcast Feature</span>
+        <div class="award-title">Featured on Panjabi Pod: Mars Travel Explained in Panjabi</div>
+        <div class="award-who">Arshleen Kaur Sahni</div>
+        <p class="award-desc">Featured guest on Panjabi Pod discussing Mars architecture, space exploration, and the journey of becoming an award-winning Mars architect.</p>
+        <div class="award-links">
+          <a class="award-link" href="https://creators.spotify.com/pod/profile/panjabipod/episodes/Mars-Travel-Explained-in-Panjabi--Award-Winning-Mars-Architect--Funny--Panjabi-Pod-49--2024-e2ph1v9" target="_blank" rel="noopener noreferrer">Listen to Podcast</a>
+        </div>
       </div>
 
       <div class="award-card reveal" data-delay="200">
-        <div class="award-img-wrap"><img src="assets/images/Represented India at HI-SEAS Analog Astronaut Mission, Hawaii.png" alt="India at HI-SEAS"/></div>
+        <div class="award-img-wrap"><img src="assets/images/Represented India at HI-SEAS Analog Astronaut Mission, Hawaii.webp" alt="India at HI-SEAS"/></div>
         <span class="award-tag violet">International</span>
         <div class="award-title">Represented India at HI-SEAS Analog Astronaut Mission, Hawaii</div>
         <div class="award-who">Aagam Jain</div>
@@ -162,6 +182,13 @@
         <div class="award-title">Winner, FIA Ideathon 2025</div>
         <div class="award-who">GAIA-HAB: Generative Adaptive Interface for Astronauts</div>
         <p class="award-desc">Recognized for the groundbreaking project "GAIA-HAB: Generative Adaptive Interface for Astronauts, Holistic Adaptive Biophilia," which envisions adaptive, biophilic space habitats to enhance astronaut health, resilience, and performance.</p>
+      </div>
+
+      <div class="award-card reveal" data-delay="0">
+        <span class="award-tag">Individual Award</span>
+        <div class="award-title">Indian Achievers Forum Award</div>
+        <div class="award-who">Arshleen Kaur Sahni</div>
+        <p class="award-desc">Arshleen's groundbreaking contributions to the field earned her the prestigious Indian Achievers Forum Award, a testament to her dedication, ingenuity, and impact on the space technology landscape.</p>
       </div>
 
 
@@ -256,7 +283,7 @@
         <img class="contrib-img" src="assets/images/ach-glex2025.png" alt="GLEX 2025 Paper Presentation"/>
         <div class="contrib-body">
           <span class="contrib-tag">Research Paper</span>
-          <div class="contrib-title">Paper Presentation, GLEX 2025, ISRO × IAF</div>
+          <div class="contrib-title">Paper Presentation, GLEX 2025, ISRO - IAF</div>
           <p class="contrib-desc">Presented a paper at the GLEX 2025 conference proceedings, hosted by ISRO in collaboration with IAF, one of the most prestigious global space exploration forums.</p>
         </div>
       </div>
@@ -304,10 +331,10 @@
       <div class="footer-cols">
         <div class="footer-col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="projects.html">Projects</a></li></ul></div>
         <div class="footer-col"><h4>Explore</h4><ul><li><a href="team.html">Team</a></li><li><a href="achievements.html">Achievements</a></li><li><a href="events.html">Events</a></li></ul></div>
-        <div class="footer-col"><h4>Connect</h4><ul><li><a href="contact.html">Contact Us</a></li><li><a href="mailto:info.arkasa.at@gmail.com">info.arkasa.at@gmail.com</a></li><li><span style="color:var(--text-dim)">Raipur, Chhattisgarh</span></li><li><span style="color:var(--text-dim)">India 492001</span></li></ul></div>
+        <div class="footer-col"><h4>Connect</h4><ul><li><a href="contact.html">Contact Us</a></li><li><a href="mailto:info@arkasa.in">info@arkasa.in</a></li><li><span style="color:var(--text-dim)">Raipur, Chhattisgarh</span></li><li><span style="color:var(--text-dim)">India 492001</span></li></ul></div>
       </div>
     </div>
-    <div class="footer-bottom">© 2025 by ARKASA Space Architecture Design Research Labs. All rights reserved.</div>
+    <div class="footer-bottom">&#169; 2025 by ARKASA Space Architecture Design Research Labs. All rights reserved.</div>
   </div>
 </footer>
 <script src="script.js"></script>
